@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.25)  4 MAY 2026 11:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.25)  4 MAY 2026 11:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -888,30 +888,30 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 29.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 32.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -947,18 +947,18 @@ LaTeX Font Info:    ... okay on input line 29.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 29.
-Package microtype Info: Applying patch `item' on input line 29.
-Package microtype Info: Applying patch `toc' on input line 29.
-Package microtype Info: Applying patch `eqnum' on input line 29.
-Package microtype Info: Applying patch `footnote' on input line 29.
+LaTeX Info: Redefining \microtypecontext on input line 32.
+Package microtype Info: Applying patch `item' on input line 32.
+Package microtype Info: Applying patch `toc' on input line 32.
+Package microtype Info: Applying patch `eqnum' on input line 32.
+Package microtype Info: Applying patch `footnote' on input line 32.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 29.
+LaTeX Info: Redefining \showhyphens on input line 32.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1016,9 +1016,9 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report.bbl' found.
  (./report.bbl)
-Package biblatex Info: Reference section=0 on input line 29.
-Package biblatex Info: Reference segment=0 on input line 29.
-Package hyperref Info: Link coloring ON on input line 29.
+Package biblatex Info: Reference section=0 on input line 32.
+Package biblatex Info: Reference segment=0 on input line 32.
+Package hyperref Info: Link coloring ON on input line 32.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1028,47 +1028,47 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count471
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
  (./report.out) (./report.out)
 \@outlinefile=\write5
 \openout5 = `report.out'.
 
-Package hyperref Info: Option `pageanchor' set `false' on input line 31.
+Package hyperref Info: Option `pageanchor' set `false' on input line 34.
  [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package hyperref Info: Option `pageanchor' set `true' on input line 59.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 65.
+Package hyperref Info: Option `pageanchor' set `true' on input line 62.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 68.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 65.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 68.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 65.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 68.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 65.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 68.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 65.
+(Font)              <10.95> on input line 68.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 65.
+(Font)              <8> on input line 68.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 65.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
+(Font)              <6> on input line 68.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -1084,75 +1084,75 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 <figs/sentinel2.png, id=256, 394.419pt x 206.736pt>
 File: figs/sentinel2.png Graphic file (type png)
 <use figs/sentinel2.png>
-Package pdftex.def Info: figs/sentinel2.png  used on input line 108.
+Package pdftex.def Info: figs/sentinel2.png  used on input line 111.
 (pdftex.def)             Requested size: 422.77664pt x 221.60594pt.
  [1
 
 ] [2 <./figs/sentinel2.png>] [3] [4] [5] [6]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 161.
+(Font)              <10> on input line 164.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 161.
+(Font)              <7> on input line 164.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 161.
+(Font)              <5> on input line 164.
 
-Overfull \hbox (47.99997pt too wide) in alignment at lines 188--188
+Overfull \hbox (47.99997pt too wide) in alignment at lines 191--191
 [][][][] 
  []
 
 [7]
-Underfull \hbox (badness 10000) in alignment at lines 220--220
+Underfull \hbox (badness 10000) in alignment at lines 223--223
 [][][][] 
  []
 
 <figs/2020_merged_agebu_rurall.png, id=358, 1060.96375pt x 633.36626pt>
 File: figs/2020_merged_agebu_rurall.png Graphic file (type png)
 <use figs/2020_merged_agebu_rurall.png>
-Package pdftex.def Info: figs/2020_merged_agebu_rurall.png  used on input line 227.
+Package pdftex.def Info: figs/2020_merged_agebu_rurall.png  used on input line 230.
 (pdftex.def)             Requested size: 230.18253pt x 137.40813pt.
 
-Overfull \hbox (0.79999pt too wide) in paragraph at lines 227--228
+Overfull \hbox (0.79999pt too wide) in paragraph at lines 230--231
  [][] 
  []
 
 <figs/2010_ageb_u.png, id=359, 1053.9375pt x 637.38126pt>
 File: figs/2010_ageb_u.png Graphic file (type png)
 <use figs/2010_ageb_u.png>
-Package pdftex.def Info: figs/2010_ageb_u.png  used on input line 231.
+Package pdftex.def Info: figs/2010_ageb_u.png  used on input line 234.
 (pdftex.def)             Requested size: 230.18253pt x 139.20311pt.
 
-Overfull \hbox (0.79999pt too wide) in paragraph at lines 231--232
+Overfull \hbox (0.79999pt too wide) in paragraph at lines 234--235
  [][] 
  []
 
 [8 <./figs/2020_merged_agebu_rurall.png> <./figs/2010_ageb_u.png>]
-Underfull \hbox (badness 10000) in alignment at lines 255--255
+Underfull \hbox (badness 10000) in alignment at lines 258--258
 [][][] 
  []
 
 <figs/eda_raw_popden_and_population_logx.png, id=377, 868.6854pt x 462.0462pt>
 File: figs/eda_raw_popden_and_population_logx.png Graphic file (type png)
 <use figs/eda_raw_popden_and_population_logx.png>
-Package pdftex.def Info: figs/eda_raw_popden_and_population_logx.png  used on input line 270.
+Package pdftex.def Info: figs/eda_raw_popden_and_population_logx.png  used on input line 273.
 (pdftex.def)             Requested size: 469.75502pt x 249.86078pt.
 [9]
 <figs/eda_log_popden_distribution.png, id=385, 507.5763pt x 269.3262pt>
 File: figs/eda_log_popden_distribution.png Graphic file (type png)
 <use figs/eda_log_popden_distribution.png>
-Package pdftex.def Info: figs/eda_log_popden_distribution.png  used on input line 299.
+Package pdftex.def Info: figs/eda_log_popden_distribution.png  used on input line 302.
 (pdftex.def)             Requested size: 237.17795pt x 125.85182pt.
 
-Overfull \hbox (5.4515pt too wide) in paragraph at lines 299--301
+Overfull \hbox (5.4515pt too wide) in paragraph at lines 302--304
  [][] 
  []
 
 <figs/eda_log_popden_counts.png, id=386, 507.3354pt x 269.3262pt>
 File: figs/eda_log_popden_counts.png Graphic file (type png)
 <use figs/eda_log_popden_counts.png>
-Package pdftex.def Info: figs/eda_log_popden_counts.png  used on input line 305.
+Package pdftex.def Info: figs/eda_log_popden_counts.png  used on input line 308.
 (pdftex.def)             Requested size: 237.17795pt x 125.90936pt.
 
-Overfull \hbox (5.4515pt too wide) in paragraph at lines 305--307
+Overfull \hbox (5.4515pt too wide) in paragraph at lines 308--310
  [][] 
  []
 
@@ -1160,15 +1160,15 @@ Overfull \hbox (5.4515pt too wide) in paragraph at lines 305--307
 <figs/eda_state_counts_filtered.png, id=396, 709.9323pt x 290.2845pt>
 File: figs/eda_state_counts_filtered.png Graphic file (type png)
 <use figs/eda_state_counts_filtered.png>
-Package pdftex.def Info: figs/eda_state_counts_filtered.png  used on input line 317.
+Package pdftex.def Info: figs/eda_state_counts_filtered.png  used on input line 320.
 (pdftex.def)             Requested size: 375.80544pt x 153.66844pt.
 <figs/eda_state_log_popden_quantiles.png, id=397, 710.1732pt x 333.6465pt>
 File: figs/eda_state_log_popden_quantiles.png Graphic file (type png)
 <use figs/eda_state_log_popden_quantiles.png>
-Package pdftex.def Info: figs/eda_state_log_popden_quantiles.png  used on input line 324.
+Package pdftex.def Info: figs/eda_state_log_popden_quantiles.png  used on input line 327.
 (pdftex.def)             Requested size: 375.80544pt x 176.55688pt.
  [11 <./figs/eda_log_popden_distribution.png> <./figs/eda_log_popden_counts.png> <./figs/eda_state_counts_filtered.png>] [12 <./figs/eda_state_log_popden_quantiles.png>]
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 369.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 372.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1179,9 +1179,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 <figs/chip_180605/inputs/rgb_composite.png, id=418, 360.74776pt x 359.54324pt>
 File: figs/chip_180605/inputs/rgb_composite.png Graphic file (type png)
 <use figs/chip_180605/inputs/rgb_composite.png>
-Package pdftex.def Info: figs/chip_180605/inputs/rgb_composite.png  used on input line 441.
+Package pdftex.def Info: figs/chip_180605/inputs/rgb_composite.png  used on input line 444.
 (pdftex.def)             Requested size: 155.02pt x 154.50731pt.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 443.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 446.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1192,10 +1192,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 <figs/chip_117931/inputs/rgb_composite.png, id=419, 355.92975pt x 359.54324pt>
 File: figs/chip_117931/inputs/rgb_composite.png Graphic file (type png)
 <use figs/chip_117931/inputs/rgb_composite.png>
-Package pdftex.def Info: figs/chip_117931/inputs/rgb_composite.png  used on input line 448.
+Package pdftex.def Info: figs/chip_117931/inputs/rgb_composite.png  used on input line 451.
 (pdftex.def)             Requested size: 155.02pt x 156.59206pt.
  [13]
-Underfull \hbox (badness 1360) in paragraph at lines 476--476
+Underfull \hbox (badness 1360) in paragraph at lines 479--479
 []|\T1/lmr/m/n/12 (+20) Managed by user (GPUs re-
  []
 
@@ -1203,15 +1203,15 @@ Underfull \hbox (badness 1360) in paragraph at lines 476--476
 <figs/fold_map_cdmx.png, id=488, 449.5194pt x 557.4426pt>
 File: figs/fold_map_cdmx.png Graphic file (type png)
 <use figs/fold_map_cdmx.png>
-Package pdftex.def Info: figs/fold_map_cdmx.png  used on input line 625.
+Package pdftex.def Info: figs/fold_map_cdmx.png  used on input line 628.
 (pdftex.def)             Requested size: 211.38832pt x 262.13414pt.
  [19 <./figs/fold_map_cdmx.png>]
-Overfull \hbox (11.20575pt too wide) in paragraph at lines 649--677
+Overfull \hbox (11.20575pt too wide) in paragraph at lines 652--680
  [][] 
  []
 
 [20]
-Overfull \hbox (7.91844pt too wide) in paragraph at lines 690--691
+Overfull \hbox (7.91844pt too wide) in paragraph at lines 693--694
  []\T1/lmr/bx/n/12 (-20) Hardware and schedul-ing.[] \T1/lmr/m/n/12 (-20) Com-pu-ta-tion-ally in-ten-sive steps (es-pe-cially ap-ply-ing foundation-
  []
 
@@ -1219,119 +1219,119 @@ Overfull \hbox (7.91844pt too wide) in paragraph at lines 690--691
 <figs/case_study_actual_vs_predicted.pdf, id=549, 1022.85121pt x 679.33798pt>
 File: figs/case_study_actual_vs_predicted.pdf Graphic file (type pdf)
 <use figs/case_study_actual_vs_predicted.pdf>
-Package pdftex.def Info: figs/case_study_actual_vs_predicted.pdf  used on input line 752.
+Package pdftex.def Info: figs/case_study_actual_vs_predicted.pdf  used on input line 755.
 (pdftex.def)             Requested size: 469.75502pt x 311.99133pt.
  [24 <./figs/case_study_actual_vs_predicted.pdf>]
 <figs/oof_calibration_alphaearth2020.pdf, id=639, 494.51596pt x 271.60118pt>
 File: figs/oof_calibration_alphaearth2020.pdf Graphic file (type pdf)
 <use figs/oof_calibration_alphaearth2020.pdf>
-Package pdftex.def Info: figs/oof_calibration_alphaearth2020.pdf  used on input line 780.
+Package pdftex.def Info: figs/oof_calibration_alphaearth2020.pdf  used on input line 783.
 (pdftex.def)             Requested size: 234.8775pt x 129.0036pt.
 <figs/oof_residuals_alphaearth2020.pdf, id=640, 524.13695pt x 261.92104pt>
 File: figs/oof_residuals_alphaearth2020.pdf Graphic file (type pdf)
 <use figs/oof_residuals_alphaearth2020.pdf>
-Package pdftex.def Info: figs/oof_residuals_alphaearth2020.pdf  used on input line 781.
+Package pdftex.def Info: figs/oof_residuals_alphaearth2020.pdf  used on input line 784.
 (pdftex.def)             Requested size: 234.8775pt x 117.3718pt.
 <figs/oof_calibration_clay2020.pdf, id=641, 500.96191pt x 271.60118pt>
 File: figs/oof_calibration_clay2020.pdf Graphic file (type pdf)
 <use figs/oof_calibration_clay2020.pdf>
-Package pdftex.def Info: figs/oof_calibration_clay2020.pdf  used on input line 787.
+Package pdftex.def Info: figs/oof_calibration_clay2020.pdf  used on input line 790.
 (pdftex.def)             Requested size: 234.8775pt x 127.34174pt.
 <figs/oof_residuals_clay2020.pdf, id=642, 524.13695pt x 261.92104pt>
 File: figs/oof_residuals_clay2020.pdf Graphic file (type pdf)
 <use figs/oof_residuals_clay2020.pdf>
-Package pdftex.def Info: figs/oof_residuals_clay2020.pdf  used on input line 788.
+Package pdftex.def Info: figs/oof_residuals_clay2020.pdf  used on input line 791.
 (pdftex.def)             Requested size: 234.8775pt x 117.3718pt.
 <figs/oof_calibration_clay2010.pdf, id=643, 500.96191pt x 271.60118pt>
 File: figs/oof_calibration_clay2010.pdf Graphic file (type pdf)
 <use figs/oof_calibration_clay2010.pdf>
-Package pdftex.def Info: figs/oof_calibration_clay2010.pdf  used on input line 798.
+Package pdftex.def Info: figs/oof_calibration_clay2010.pdf  used on input line 801.
 (pdftex.def)             Requested size: 234.8775pt x 127.34174pt.
 <figs/oof_residuals_clay2010.pdf, id=644, 524.13695pt x 261.92104pt>
 File: figs/oof_residuals_clay2010.pdf Graphic file (type pdf)
 <use figs/oof_residuals_clay2010.pdf>
-Package pdftex.def Info: figs/oof_residuals_clay2010.pdf  used on input line 799.
+Package pdftex.def Info: figs/oof_residuals_clay2010.pdf  used on input line 802.
 (pdftex.def)             Requested size: 234.8775pt x 117.3718pt.
  [25] [26 <./figs/oof_calibration_alphaearth2020.pdf> <./figs/oof_residuals_alphaearth2020.pdf> <./figs/oof_calibration_clay2020.pdf> <./figs/oof_residuals_clay2020.pdf> <./figs/oof_calibration_clay2010.pdf> <./figs/oof_residuals_clay2010.pdf>]
 <figs/spatial_state_r2.png, id=1109, 930.969pt x 476.982pt>
 File: figs/spatial_state_r2.png Graphic file (type png)
 <use figs/spatial_state_r2.png>
-Package pdftex.def Info: figs/spatial_state_r2.png  used on input line 820.
+Package pdftex.def Info: figs/spatial_state_r2.png  used on input line 823.
 (pdftex.def)             Requested size: 469.75502pt x 240.68112pt.
  [27 <./figs/spatial_state_r2.png>] [28]
 <figs/spatial_state_bias.png, id=1132, 773.289pt x 536.4405pt>
 File: figs/spatial_state_bias.png Graphic file (type png)
 <use figs/spatial_state_bias.png>
-Package pdftex.def Info: figs/spatial_state_bias.png  used on input line 873.
+Package pdftex.def Info: figs/spatial_state_bias.png  used on input line 876.
 (pdftex.def)             Requested size: 469.75502pt x 325.86945pt.
  [29 <./figs/spatial_state_bias.png>] [30]
 <figs/case_study_temporal_change.pdf, id=1148, 966.4516pt x 679.33798pt>
 File: figs/case_study_temporal_change.pdf Graphic file (type pdf)
 <use figs/case_study_temporal_change.pdf>
-Package pdftex.def Info: figs/case_study_temporal_change.pdf  used on input line 961.
+Package pdftex.def Info: figs/case_study_temporal_change.pdf  used on input line 964.
 (pdftex.def)             Requested size: 469.75502pt x 330.19377pt.
  [31 <./figs/case_study_temporal_change.pdf>]
 <figs/temporal_change_hexbin_cross_temporal.pdf, id=1249, 805.5193pt x 488.42325pt>
 File: figs/temporal_change_hexbin_cross_temporal.pdf Graphic file (type pdf)
 <use figs/temporal_change_hexbin_cross_temporal.pdf>
-Package pdftex.def Info: figs/temporal_change_hexbin_cross_temporal.pdf  used on input line 978.
+Package pdftex.def Info: figs/temporal_change_hexbin_cross_temporal.pdf  used on input line 981.
 (pdftex.def)             Requested size: 469.75502pt x 284.83585pt.
  [32] [33 <./figs/temporal_change_hexbin_cross_temporal.pdf>] [34] [35] [36] [37] [38] [39] [40] [41]
 <figs/spatial_state_mae.png, id=1435, 930.969pt x 476.982pt>
 File: figs/spatial_state_mae.png Graphic file (type png)
 <use figs/spatial_state_mae.png>
-Package pdftex.def Info: figs/spatial_state_mae.png  used on input line 1149.
+Package pdftex.def Info: figs/spatial_state_mae.png  used on input line 1152.
 (pdftex.def)             Requested size: 469.75502pt x 240.68112pt.
 <figs/statebystate_table.png, id=1438, 846.16125pt x 620.3175pt>
 File: figs/statebystate_table.png Graphic file (type png)
 <use figs/statebystate_table.png>
-Package pdftex.def Info: figs/statebystate_table.png  used on input line 1156.
+Package pdftex.def Info: figs/statebystate_table.png  used on input line 1159.
 (pdftex.def)             Requested size: 469.75502pt x 344.37494pt.
  [42 <./figs/spatial_state_mae.png>] [43 <./figs/statebystate_table.png>]
 <figs/full_table_data_characteristics_importance.png, id=1453, 650.43pt x 599.23875pt>
 File: figs/full_table_data_characteristics_importance.png Graphic file (type png)
 <use figs/full_table_data_characteristics_importance.png>
-Package pdftex.def Info: figs/full_table_data_characteristics_importance.png  used on input line 1170.
+Package pdftex.def Info: figs/full_table_data_characteristics_importance.png  used on input line 1173.
 (pdftex.def)             Requested size: 469.75502pt x 432.79568pt.
 <figs/state_r2_vs_characteristics_alphaearth2020_ridge.pdf, id=1454, 1141.63428pt x 738.92393pt>
 File: figs/state_r2_vs_characteristics_alphaearth2020_ridge.pdf Graphic file (type pdf)
 <use figs/state_r2_vs_characteristics_alphaearth2020_ridge.pdf>
-Package pdftex.def Info: figs/state_r2_vs_characteristics_alphaearth2020_ridge.pdf  used on input line 1178.
+Package pdftex.def Info: figs/state_r2_vs_characteristics_alphaearth2020_ridge.pdf  used on input line 1181.
 (pdftex.def)             Requested size: 469.75502pt x 304.04318pt.
 <figs/state_r2_vs_characteristics_alphaearth2020_xgboost.pdf, id=1455, 1141.63428pt x 738.92393pt>
 File: figs/state_r2_vs_characteristics_alphaearth2020_xgboost.pdf Graphic file (type pdf)
 <use figs/state_r2_vs_characteristics_alphaearth2020_xgboost.pdf>
-Package pdftex.def Info: figs/state_r2_vs_characteristics_alphaearth2020_xgboost.pdf  used on input line 1184.
+Package pdftex.def Info: figs/state_r2_vs_characteristics_alphaearth2020_xgboost.pdf  used on input line 1187.
 (pdftex.def)             Requested size: 469.75502pt x 304.04318pt.
 
 
-LaTeX Warning: Float too large for page by 39.60619pt on input line 1189.
+LaTeX Warning: Float too large for page by 39.60619pt on input line 1192.
 
 <figs/state_r2_vs_characteristics_clay2010_ridge.pdf, id=1456, 1141.63428pt x 738.92393pt>
 File: figs/state_r2_vs_characteristics_clay2010_ridge.pdf Graphic file (type pdf)
 <use figs/state_r2_vs_characteristics_clay2010_ridge.pdf>
-Package pdftex.def Info: figs/state_r2_vs_characteristics_clay2010_ridge.pdf  used on input line 1194.
+Package pdftex.def Info: figs/state_r2_vs_characteristics_clay2010_ridge.pdf  used on input line 1197.
 (pdftex.def)             Requested size: 469.75502pt x 304.04318pt.
 <figs/state_r2_vs_characteristics_clay2010_xgboost.pdf, id=1457, 1141.63428pt x 738.92393pt>
 File: figs/state_r2_vs_characteristics_clay2010_xgboost.pdf Graphic file (type pdf)
 <use figs/state_r2_vs_characteristics_clay2010_xgboost.pdf>
-Package pdftex.def Info: figs/state_r2_vs_characteristics_clay2010_xgboost.pdf  used on input line 1200.
+Package pdftex.def Info: figs/state_r2_vs_characteristics_clay2010_xgboost.pdf  used on input line 1203.
 (pdftex.def)             Requested size: 469.75502pt x 304.04318pt.
 
-LaTeX Warning: Float too large for page by 26.00618pt on input line 1205.
+LaTeX Warning: Float too large for page by 26.00618pt on input line 1208.
 
 <figs/state_r2_vs_characteristics_clay2020_ridge.pdf, id=1458, 1141.30296pt x 738.92393pt>
 File: figs/state_r2_vs_characteristics_clay2020_ridge.pdf Graphic file (type pdf)
 <use figs/state_r2_vs_characteristics_clay2020_ridge.pdf>
-Package pdftex.def Info: figs/state_r2_vs_characteristics_clay2020_ridge.pdf  used on input line 1210.
+Package pdftex.def Info: figs/state_r2_vs_characteristics_clay2020_ridge.pdf  used on input line 1213.
 (pdftex.def)             Requested size: 469.75502pt x 304.13338pt.
 <figs/state_r2_vs_characteristics_clay2020_xgboost.pdf, id=1459, 1141.63428pt x 738.92393pt>
 File: figs/state_r2_vs_characteristics_clay2020_xgboost.pdf Graphic file (type pdf)
 <use figs/state_r2_vs_characteristics_clay2020_xgboost.pdf>
-Package pdftex.def Info: figs/state_r2_vs_characteristics_clay2020_xgboost.pdf  used on input line 1216.
+Package pdftex.def Info: figs/state_r2_vs_characteristics_clay2020_xgboost.pdf  used on input line 1219.
 (pdftex.def)             Requested size: 469.75502pt x 304.04318pt.
 
-LaTeX Warning: Float too large for page by 26.09637pt on input line 1221.
+LaTeX Warning: Float too large for page by 26.09637pt on input line 1224.
 
 [44
 
@@ -1343,15 +1343,15 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36696 strings out of 478268
- 713352 string characters out of 5846347
- 1507829 words of memory out of 5000000
- 53693 multiletter control sequences out of 15000+600000
- 595813 words of font info for 281 fonts, out of 8000000 for 9000
+ 36695 strings out of 478268
+ 713345 string characters out of 5846347
+ 1507832 words of memory out of 5000000
+ 53694 multiletter control sequences out of 15000+600000
+ 595716 words of font info for 280 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,19n,82p,2480b,5033s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (52 pages, 10206787 bytes).
+Output written on report.pdf (52 pages, 10207089 bytes).
 PDF statistics:
  2287 PDF objects out of 2487 (max. 8388607)
  968 compressed objects within 10 object streams
