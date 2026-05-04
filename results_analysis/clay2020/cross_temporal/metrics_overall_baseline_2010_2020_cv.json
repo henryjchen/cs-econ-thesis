@@ -18,5 +18,5 @@
   "cv": "random 5-fold (seed=0)",
   "feature_set": "emb2010",
   "n_rows": 52086,
-  "seconds": 173.44171786308289
+  "seconds": 176.9833698272705
 }

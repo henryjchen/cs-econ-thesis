@@ -62,7 +62,7 @@
 \pagenumbering{roman}
 
 \begin{abstract}
-Accurate population data underpins some of the most consequential decisions in public life, from infrastructure investment and electoral redistricting to epidemic response and poverty measurement. Yet the primary instrument for collecting it, the decennial census, is expensive, infrequent, and structurally unable to track the rapid demographic shifts that economic shocks produce. Satellite imagery offers a promising alternative. Global, continuous, and updated at regular cadences, it can in principle provide the high-frequency population estimates that censuses cannot. This thesis evaluates whether geospatial foundation models can predict population density from satellite imagery at fine spatial resolutions, using Mexico as a test case. It assesses two state-of-the-art geospatial foundation models---Google's AlphaEarth and the Clay foundation model---on data from Mexico's 2020 and 2010 censuses, covering over 100,000 urban AGEB and rural locality polygons. Using ridge regression and XGBoost prediction heads trained on model embeddings, this thesis askes two questions: can these models predict cross-sectional population density, and can they detect decadal population change? On cross-sectional prediction, AlphaEarth embeddings paired with XGBoost explain $73\%$ of variation in log population density at the polygon level (R$^2 = 0.727$), rising to $88\% $at the municipality level, exceeding comparable benchmarks from task-specific models in the intercensal estimation literature. Prediction quality varies systematically with polygon area, the strongest predictor of state-level accuracy ($r = 0.56$). On temporal prediction, decadal change proves substantially harder to model, with universally negative $R^2$ values. However, Pearson correlations of $r \approx0.44$--$0.53$ indicate that both models reliably identify which areas are growing relative to which are shrinking. These findings position geospatial foundation models as cost-effective nowcasting tools capable of helping bridge the data gaps that rapid demographic change creates between census cycles.
+Accurate population data underpins some of the most consequential decisions in public life, from infrastructure investment and electoral redistricting to epidemic response and poverty measurement. Yet the primary instrument for collecting it, the decennial census, is expensive, infrequent, and structurally unable to track the rapid demographic shifts that economic shocks can produce. Satellite imagery offers a promising alternative. Global, continuous, and updated at regular cadences, it can in principle provide the high-frequency population estimates that censuses cannot. This thesis evaluates whether geospatial foundation models can predict population density from satellite imagery at fine spatial resolutions, using Mexico as a test case. It assesses two state-of-the-art geospatial foundation models---Google's AlphaEarth and the Clay model---on data from Mexico's 2020 and 2010 censuses, covering over 100,000 urban AGEB and rural locality polygons. Using ridge regression and XGBoost prediction heads trained on model embeddings, this thesis askes two questions: can these models predict cross-sectional population density, and can they detect decadal population change? On cross-sectional prediction, AlphaEarth embeddings paired with XGBoost explain $73\%$ of variation in log population density at the polygon level (R$^2 = 0.727$), rising to $88\%$ at the municipality level, exceeding comparable benchmarks from task-specific models and other geospatial foundation models in the literature. Prediction quality varies systematically with polygon area, which is the strongest predictor of state-level accuracy ($r = 0.56$). On temporal prediction, decadal change proves substantially harder to model, with universally negative $R^2$ values. However, Pearson correlations of $r \approx0.44$--$0.53$ indicate that both models reliably identify which areas are growing relative to which are shrinking. These findings position geospatial foundation models as cost-effective nowcasting tools capable of helping bridge the data gaps that rapid demographic change creates between census cycles.
 \end{abstract}
 
 \newpage
@@ -72,7 +72,7 @@ Accurate population data underpins some of the most consequential decisions in p
 
 \section*{Acknowledgements}
 \addcontentsline{toc}{section}{Acknowledgements}
-My deepest thanks go to my advisor, Professor Luke Sanford, for his guidance, encouragement, and thoughtful feedback throughout this project. I first joined his lab the summer after my freshman year, when I was still figuring out what I wanted to study. I am glad that this final project brought us together full circle to cap off my undergraduate academic career.
+My deepest thanks go to my advisor, Professor Luke Sanford, for his guidance, encouragement, and thoughtful feedback throughout this project. I first joined his lab the summer after my freshman year, when I was still unsure what I wanted to study. I am glad that this final project brought us together in a full circle moment to cap off my undergraduate academic career.
 
 I would also like to thank Cesar Martinez-Alvarez at the University of California, Santa Barbara for his insightful discussions early on, which helped me navigate the INEGI dataset and narrow the project's focus on Mexico.
 
@@ -99,9 +99,9 @@ Finally, thank you to my family, friends, and fellow Computer Science and Econom
 \label{sub:contextandmotivation}
 Population data underlies many of the most critical decisions in public life. Everything from estimating the effects of crime on neighborhood outcomes to modeling vaccination responses in response to epidemics to electoral redistricting relies on accurate and precise understandings of where people live and how they move around. In fiscal year 2021 alone, the United States allocated over \$2.8 trillion in federal funding to various programs using census-derived formulas \parencite{USCensus2023Funding}.
 
-Despite its immense relevance, population data is most commonly collected through censuses, which are conducted infrequently and are expensive to run. Even in developed countries like the U.S. and Mexico, the census is only conducted every ten years, with less rigorous update surveys conducted in the intervening years. These surveys rely on modeling and sampling rather than full enumeration and carry substantial uncertainty, particularly for small geographic areas. At the sub-municipal level---neighborhoods, blocks, or census tracts---high-frequency, fully enumerated population data is rarely available. This challenge is exacerbated in developing countries, which may lack the resources to conduct a robust census at all. The economic costs of this data gap are real and measurable. Misallocated infrastructure investment, firms making location decisions on decade-old data, and governments unable to track labor migration in response to economic shocks all trace partly back to the infrequency and coarseness of population measurement. In development economics, the problem compounds. Countries with the weakest statistical capacity are often precisely those where accurate population data would most change policy outcomes \parencite{Jerven2013}.
+Despite its immense relevance, population data is most commonly collected through censuses, which are conducted infrequently and are expensive to run. Even in developed countries like the U.S. and Mexico, the census is only conducted every ten years, with less rigorous update surveys conducted in the years between censuses. These surveys rely on modeling and sampling rather than full enumeration and carry substantial uncertainty, particularly for small geographic areas. At the sub-municipal level (e.g., neighborhoods, blocks, or census tracts) high-frequency, fully enumerated population data is rarely available. This challenge is exacerbated in developing countries, which may lack the resources to conduct a robust census at all. The economic costs of this data gap are real and measurable. Misallocated infrastructure investment, firms making location decisions on decade-old data, and governments unable to track labor migration in response to economic shocks all trace partly back to the infrequency and coarseness of population measurement. In development economics, the problem compounds. Countries with the weakest statistical capacity are often precisely those where accurate population data would most change policy outcomes \parencite{Jerven2013}.
 
-Satellite imagery provides a promising avenue for estimating population density at fine spatial resolutions and regular temporal cadences. Satellites offer global, continuous coverage of the Earth's surface at high resolution, bypassing some of the expensive and time-consuming process of conducting a census. Recent generations of open access research satellites, like the Sentinel-2 (2015) and Landsat-9 (2021), can provide imagery at 10m resolution, which is comparable to half a volleyball court. The most advanced commercial satellites, like BlackSky's Gen-3 satellites (2025) provide up to a 35 cm resolution \parencite{BlackSkyGen3}. The sensors onboard capture not just visual images of the Earth's surface, but also other data like radar and infrared (see Figure~\ref{fig:sentinel2-payload}), which can be used to gather insights about the vegetation and water coverage of that specific plot of land. Perhaps most importantly, these satellite images are updated on a regular basis, often multiple times per day, allowing for the tracking of granular changes in population density over time compared to the decennial censuses. If their information onboard contain enough signal about human settlement patterns to support accurate population density estimation, then they could be a valuable tool for filling the gap in population data. 
+Satellite imagery provides a promising avenue for estimating population density at fine spatial resolutions and regular temporal cadences. Satellites offer global, continuous coverage of the Earth's surface at high resolution, bypassing some of the expensive and time-consuming process of conducting a census. Recent generations of open access research satellites, like the Sentinel-2 (2015) and Landsat-9 (2021), can provide imagery at 10\,m resolution, which is comparable to half a volleyball court. The most advanced commercial satellites, like BlackSky's Gen-3 satellites (2025) provide up to a 35\,cm resolution \parencite{BlackSkyGen3}. The sensors onboard capture not just visual images of the Earth's surface, but also other data like radar and infrared (see Figure~\ref{fig:sentinel2-payload}), which can be used to gather insights about the vegetation and water coverage of that specific plot of land. Perhaps most importantly, these satellite images are updated on a regular basis, often multiple times per day, allowing for the tracking of granular changes in population density over time compared to the decennial censuses. If their information onboard contain enough signal about human settlement patterns to support accurate population density estimation, then they could be a valuable tool for filling the gap in population data. 
 
 \begin{figure}[htbp]
   \centering
@@ -110,20 +110,22 @@ Satellite imagery provides a promising avenue for estimating population density 
   \label{fig:sentinel2-payload}
 \end{figure}
 
-This thesis project aims to answer whether satellite imagery with geospatial foundation models is rich and dynamic enough to fill the gap in accurately collected population data. It evaluates two preeminent geospatial foundation models, the Clay foundation model of Earth data (2024) and Google's AlphaEarth model (2025), on the task of predicting population density in Mexico, chosen for its accessible census data and its relevance to a range of economic questions where population dynamics and census frequency are in tension. Mexico has experienced a recent surge in mining activity concentrated in states like Sonora and Zacatecas, generating labor migration that decennial census data cannot track at the frequency economic analysis requires. Workers move, towns swell, and the downstream mismatches in housing, services, and infrastructure provision accumulate before any enumeration can capture them. Similarly, the 2026 FIFA World Cup will be partially hosted in Mexico (in Mexico City, Guadalajara, and Monterrey), producing temporary but economically significant population concentrations whose impacts on local labor markets, retail, and municipal services traditional census data is structurally unable to isolate. These illustrate the broader problem of how economic shocks move people faster than the instruments we use to count them. Satellite-derived population estimates, updated at regular temporal cadences, could offer the kind of dynamic measurement these applications demand. Thus this project works towards distilling the limits and opportunities of using geospatial foundation models for exactly that purpose.
+This thesis project aims to answer whether satellite imagery with geospatial foundation models is rich and dynamic enough to fill the gap in accurately collected population data. It evaluates two preeminent geospatial foundation models, the Clay foundation model of Earth data (2024) and Google's AlphaEarth model (2025), on the task of predicting population density in Mexico, which was chosen for its accessible census data and its relevance to a range of economic questions where population dynamics and census frequency are in tension. Mexico has experienced a recent surge in mining activity concentrated in states like Sonora and Zacatecas, generating labor migration that decennial census data cannot track at the frequency economic analysis requires. Workers move, towns swell, and the downstream mismatches in housing, services, and infrastructure provision accumulate before any enumeration can capture them. Similarly, the 2026 FIFA World Cup will be partially hosted in Mexico (in Mexico City, Guadalajara, and Monterrey), producing temporary but economically significant population concentrations whose impacts on local labor markets, retail, and municipal services traditional census data is structurally unable to isolate. These illustrate the broader problem of how economic shocks move people faster than the instruments we use to count them. Satellite-derived population estimates, updated at regular temporal cadences, could offer the kind of dynamic measurement these applications demand. This project therefore works towards distilling the limits and opportunities of using geospatial foundation models for exactly that purpose.
 
 \subsection{Research Question}
 \label{sub:researchque}
 The guiding research questions of this thesis project are: 
 \begin{enumerate}
-  \item \textit{Can geospatial foundation models like AlphaEarth and Clay predict population density in Mexico at the AGEB and locality level?}
+  \item \textit{Can geospatial foundation models like AlphaEarth and Clay predict population density in Mexico at the AGEB and locality level? How does this performance change at a higher spatial scale?}
   \item \textit{Can these models predict population density changes over time?}
 \end{enumerate}
 
 \subsection{Key Findings}
-This thesis yields three principal findings. First, geospatial foundation models predict cross-sectional population density with meaningful accuracy. Using AlphaEarth embeddings, an XGBoost prediction head explains $\approx73\%$ of variation in log population density at the polygon level ($R^2 = 0.727$), rising to $\approx88\%$ at the municipality level. Clay embeddings trail AlphaEarth at fine spatial scales but narrow the gap substantially after geographic aggregation. Both models exceed comparable benchmarks in the intercensal population estimation literature.
+This thesis yields three principal findings. 
 
-Second, prediction quality varies systematically across Mexico's geography. Large northern states consistently outperform smaller southern ones, driven primarily by differences in average polygon area.
+First, geospatial foundation models predict cross-sectional population density with meaningful accuracy. Using AlphaEarth embeddings, an XGBoost prediction head explains $\approx73\%$ of variation in log population density at the polygon level ($R^2 = 0.727$), rising to $\approx88\%$ at the municipality level. Clay embeddings trail AlphaEarth at fine spatial scales but narrow the gap substantially after geographic aggregation. Both models exceed comparable benchmarks in the intercensal population estimation literature.
+
+Second, prediction quality varies systematically across Mexico's geography. Large northern states consistently outperform smaller southern ones, driven primarily by differences in each state's typical polygon area.
 
 Third, predicting the magnitude of decadal population change between 2010 and 2020 proves more challenging, with universally negative $R^2$ values on the change target. However, moderate Pearson correlations ($r \approx0.44$--$0.53$) indicate that the models reliably identify which areas are growing relative to which are shrinking, even when exact magnitudes remain out of reach.
 
@@ -137,11 +139,11 @@ Third, predicting the magnitude of decadal population change between 2010 and 20
 
 \paragraph{Geospatial foundation models.} To address this problem of model transferability across geographic contexts and temporal focuses, recent work is shifting from task-specific population models to general-purpose geospatial foundation models (GeoFMs). The introduction of frameworks like MOSAIKS demonstrated that raw imagery could be translated into compressed, task-agnostic features and reused across unlimited tasks using simple linear regression, making progress towards the transferability issue \parencite{sherman2026global}. Now is an exciting time to be working on GeoFMs, with many top labs releasing models that learn reusable embeddings of places from massive multimodal inputs. In 2024, the Clay foundation model of Earth data, which uses a ViT architecture to general 768-dimensional latent space embeddings of the Earth's surface, was released as a project of the Radiant Earth non-profit \parencite{clayfoundation2026}. In 2025, Google released their AlphaEarth Foundations model \parencite{Brownetal2025}, which alongside Clay model make up the backbone of this project \parencite{proctor2025what}. While these models provide versatile embeddings, many like Clay are primarily pretrained on single-image views. Most recently, \textcite{zheng2026satellite} introduced the Tempov foundation model, which employs a bi-temporal self-supervised pretraining objective on three million Landsat image pairs. This approach forces the model to learn season-invariant semantics specifically optimized for tracking long-term changes in socioeconomic variables. Part of my research contribution is to assess the relative predictive performance of these different geospatial foundation models (namely, Clay and AlphaEarth), in addition to assessing the performance of GeoFMs against task-specific models for predicting population density. 
 
-\paragraph{Expanding to socioeconomic outcomes.} The bulk of GeoFM work today is aimed at remote-sensing and environmental image tasks, with a growing secondary focus on health and socioeconomic outcomes where population is one component rather than the sole target. \textcite{cai_annual_2026} developed a 10m annual cropland dataset for Southeast Asia using AlphaEarth embeddings and found that the incorporation of AlphaEarth embeddings improved model performance by $5.81\%$. Beyond agriculture, researchers are also now using geospatial embeddings to predict highly complex human development metrics, such as predicting the UN's Human Development Index (HDI) at the micro-level \parencite{sherman2026global}, and asset wealth across data-scarce environments \parencite{zheng2025dynamic}. The integration of Earth observation machine learning with socioeconomic research has recently been formalized by \textcite{sakamoto2025scoping}, who categorize these efforts into five principal causal workflows: outcome imputation, image deconfounding, treatment effect heterogeneity, transportability, and causal discovery. A prominent example of the outcome imputation workflow is found in \textcite{ratledge2022using}, who utilized satellite-derived wealth measurements to evaluate the causal impact of electricity grid expansion in Uganda. Their study demonstrated that grid access improves village-level asset wealth by up to $0.15$ standard deviations, more than doubling growth rates relative to untreated areas.
+\paragraph{Expanding to socioeconomic outcomes.} The bulk of GeoFM work today is aimed at remote-sensing and environmental image tasks, with a growing secondary focus on health and socioeconomic outcomes where population is one component rather than the sole target. \textcite{cai_annual_2026} developed a 10\,m annual cropland dataset for Southeast Asia using AlphaEarth embeddings and found that the incorporation of AlphaEarth embeddings improved model performance by $5.81\%$. Beyond agriculture, researchers are also now using geospatial embeddings to predict highly complex human development metrics, such as predicting the UN's Human Development Index (HDI) at the micro-level \parencite{sherman2026global}, and asset wealth across data-scarce environments \parencite{zheng2025dynamic}. The integration of Earth observation machine learning with socioeconomic research has recently been formalized by \textcite{sakamoto2025scoping}, who categorize these efforts into five principal causal workflows: outcome imputation, image deconfounding, treatment effect heterogeneity, transportability, and causal discovery. A prominent example of the outcome imputation workflow is found in \textcite{ratledge2022using}, who utilized satellite-derived wealth measurements to evaluate the causal impact of electricity grid expansion in Uganda. Their study demonstrated that grid access improves village-level asset wealth by up to $0.15$ standard deviations, more than doubling growth rates relative to untreated areas.
 
-\paragraph{The challenge of temporal prediction.} Despite these architectural advancements, predicting changes over time remains a notorious hurdle in the literature. While FMs and CNNs can explain a vast majority of the spatial (cross-sectional) variation in socioeconomic outcomes between different locations, they often struggle to explain the temporal variation within those same locations over time \parencite{khachiyan2021using, zheng2025dynamic}. The core issue is that actual temporal changes over a few years are typically very small relative to cross-sectional differences, meaning that even slight observational noise in the satellite imagery or ground-truth label data can completely obscure the signal of change. \textcite{zheng2026satellite} further argue that existing models often fail because they lack temporal consistency in their representations, leading them to overfit to static geographic priors. \textcite{Burns2026} identifies that in GeoFM embedding spaces, large interannual differences can arise from climate variability or structural context rather than actual surface transitions. She found that magnitude-only comparisons of embeddings (e.g., calculating the delta between two years of embeddings) can fail to distinguish between distinct types of change that produce similar vector magnitudes, leading to fragmented predictions in heterogeneous landscapes. By explicitly contrasting multi-seasonal image pairs during pretraining, models like Tempov have begun to address this by successfully disentangling genuine socioeconomic evolution from seasonal phenological noise, maintaining robust predictive power for decadal changes where other baselines deteriorate.
+\paragraph{The challenge of temporal prediction.} Despite these architectural advancements, predicting changes over time remains a notorious hurdle in the literature. While foundation models and CNNs can explain a vast majority of the spatial (cross-sectional) variation in socioeconomic outcomes between different locations, they often struggle to explain the temporal variation within those same locations over time \parencite{khachiyan2021using, zheng2025dynamic}. The core issue is that actual temporal changes over a few years are typically very small relative to cross-sectional differences, meaning that even slight observational noise in the satellite imagery or ground-truth label data can completely obscure the signal of change. \textcite{zheng2026satellite} further argue that existing models often fail because they lack temporal consistency in their representations, leading them to overfit to static geographic priors. \textcite{Burns2026} identifies that in GeoFM embedding spaces, large interannual differences can arise from climate variability or structural context rather than actual surface transitions. She found that magnitude-only comparisons of embeddings (e.g., calculating the delta between two years of embeddings) can fail to distinguish between distinct types of change that produce similar vector magnitudes, leading to fragmented predictions in heterogeneous landscapes. By explicitly contrasting multi-seasonal image pairs during pretraining, models like Tempov have begun to address this by successfully disentangling genuine socioeconomic evolution from seasonal phenological noise, maintaining robust predictive power for decadal changes where other baselines deteriorate.
 
-\paragraph{Predicting historical population shifts over time.} Within this temporal prediction landscape, predicting highly localized historical population shifts remains a sparse and unique niche. Traditionally, historical population estimation has relied on top-down approaches that disaggregate outdated census data. Bottom-up models that directly predict local population changes over time are rare. \textcite{khachiyan2021using} provides the most notable benchmark in this space. They successfully trained a CNN on daytime Landsat imagery to predict decadal changes in population at the 1.2km and 2.4km resolutions. They achieved an $R^2$ of $0.46$ for historical population growth rate prediction, which while good is not at the statistical rigor of other cross-sectional predictions. Moreover, because their model was trained from scratch on specific variables, it lacks task-agnostic flexibility that a GeoFM can provide. Little has been explored at the intersection of foundation models and temporal population prediction. Most GeoFM work related to population density focuses on cross-sectional estimations, like \textcite{metz2025application} who found an $R^2$ of $0.63$--$0.64$ for population density in Malawi. Even then, the quantity of work with GeoFMs for population density prediction pales in comparison to the amount of work with task-specific models.
+\paragraph{Predicting historical population shifts over time.} Within this temporal prediction landscape, predicting highly localized historical population shifts remains a sparse and unique niche. Traditionally, historical population estimation has relied on top-down approaches that disaggregate outdated census data. Bottom-up models that directly predict local population changes over time are rare. \textcite{khachiyan2021using} provides the most notable benchmark in this space. They successfully trained a CNN on daytime Landsat imagery to predict decadal changes in population at the 1.2 km and 2.4 km resolutions. They achieved an $R^2$ of $0.46$ for historical population growth rate prediction, which while good is not at the statistical rigor of other cross-sectional predictions. Moreover, because their model was trained from scratch on specific variables, it lacks task-agnostic flexibility that a GeoFM can provide. Little has been explored at the intersection of foundation models and population density prediction, let alone temporal change in population prediciton. Most GeoFM work related to population density focuses on cross-sectional estimations, like \textcite{metz2025application} who found an $R^2$ of $0.63$--$0.64$ for population density in Malawi. Even then, the quantity of work with GeoFMs for population density prediction pales in comparison to the amount of work with task-specific models.
 
 \paragraph{This project's intervention.}
 My project aims to bridge the aforementioned gap in the literature by leveraging state-of-the-art GeoFMs like AlphaEarth and Clay to predict not just static population density in census years but also the viability of these models to predict dynamic population changes. By shifting from task-specific CNNs to GeoFMs, this approach aims to maintain the high temporal accuracy seen in \textcite{khachiyan2021using} while drastically improving model transferability. When investigating the ability of these models to predict population density changes over time, I adopt a baseline-anchored approach (e.g., using 2010 embeddings to predict 2020 labels rather than using the difference between the labels to predict the difference in population density between 2010 and 2020). This attempts to preserve the historical environmental context and avoid the pitfalls of magnitude-only representations of embedding changes that \textcite{Burns2026} identified. To handle the heavily skewed distribution of population data, this project employs a log-then-inverse-transform pipeline. This methodology is well-supported by the literature. \textcite{khachiyan2021using} explicitly modeled the ``log of total population'', and \textcite{proctor2025what} utilized automated tuning pipelines that selected log transformations for prediction targets to optimize foundation model performance. This thesis follows this methodological precedent and also trains on log-transformed labels. Finally, this project tries to stay close to the insight of \textcite{ratledge2022using}, who emphasize that upstream model optimization must be carefully aligned with downstream tasks, as maximizing standard predictive metrics like $R^2$ can sometimes lead to increased bias in final inferences. 
@@ -152,13 +154,13 @@ My project aims to bridge the aforementioned gap in the literature by leveraging
 \label{sec:methodology}
 
 \subsection{Dataset}
-A substantial amount of data gathering and preparation went into this project to gather ground-truth label data. This project's geographic focus is on Mexico primarily because of the ease of access to high-quality census data and satellite imagery.
+Even though this project's geographic focus is on Mexico primarily because of the ease of access to high-quality census data and satellite imagery, a substantial amount of data gathering and preparation still went into gathering ground-truth label data.
 
 \subsubsection{Census Data Source}
 
-The census ground truth labels came from the INEGI (Instituto Nacional de Estadística y Geografía) website. The data was downloaded as a CSV file for each state, and then combined into a single master CSV file. The data was then cleaned and prepared for the analysis.
+The census ground truth labels came from the INEGI (Instituto Nacional de Estadística y Geografía) website.\footnote{INEGI website: https://www.inegi.org.mx/programas/ccpv/2020/.} The data was downloaded as a CSV file for each state, and then combined into a single combined CSV file. The data was then cleaned and prepared for analysis.
 
-I focused on the urban AGEB and rural locality level data because it was the most granular geospatial unit that census data was available at (see Table \ref{tab:inegi_hierarchy} for more on the INEGI geospatial units). I also focused on the 2020 and 2010 census data because it was the most recent data that was available, and this recency meant that I had access to better quality satellite imagery. 
+I focused on the urban AGEB and rural locality level data because it was the most granular geospatial unit that census data was available for (see Table \ref{tab:inegi_hierarchy} for more on the INEGI geospatial units). I also focused on the 2020 and 2010 census data because it was the most recent data that was available, and this recency meant that I had access to better quality satellite imagery, which would hypothetically help with better predictions and embedding quality. 
 
 An important thing to note is that urban AGEBs and rural localities are mutually exclusive and together cover the populated areas of interest. Urban AGEBs are a more granular level of geography of an urban locality; in other words, there are $\ge 1$ urban AGEB polygons within a single urban locality polygon.
 
@@ -171,27 +173,27 @@ An important thing to note is that urban AGEBs and rural localities are mutually
   \begin{tabularx}{\linewidth}{@{}
     >{\raggedright\arraybackslash}p{0.14\linewidth}
     >{\raggedright\arraybackslash}p{0.26\linewidth}
-    >{\centering\arraybackslash}p{0.08\linewidth}
-    >{\raggedright\arraybackslash}p{0.52\linewidth}
+    >{\centering\arraybackslash}p{0.10\linewidth}
+    >{\raggedright\arraybackslash}p{0.50\linewidth}
   @{}}
     \toprule
-    \textbf{Level} & \textbf{Official Name} & \textbf{Digits} & \textbf{Description} \\
+    \textbf{Level} & \textbf{Official Name} & \textbf{Census data?} & \textbf{Description} \\
     \midrule
-    State & Entidad Federativa & 2 & The 32 sovereign states of Mexico. \\
-    Municipality & Municipio / Demarcación & 3 & Political-administrative subdivisions. \\
-    Locality & Localidad Geoestadística & 4 & \textit{Urban:} $\ge$ 2{,}500 people or seat of power. \newline \colorbox{teal!15}{\strut\textit{Rural:} $<$ 2{,}500 people (point-based).} \\
-    AGEB & Área Geoestadística Básica & 4 & \colorbox{teal!15}{\strut\textit{Urban:} Nested in localities; 1--50 blocks.} \newline \textit{Rural:} Large polygon (avg.\ 10k ha). \\
-    Manzana & Manzana Geoestadística & 3 & Smallest unit. Defined by streets/features. Mostly used in urban contexts. \\
+    State & Entidad Federativa & $\checkmark$ & The 32 sovereign states of Mexico. \\
+    Municipality & Municipio / Demarcación & $\checkmark$ & Political-administrative subdivisions. \\
+    Locality & Localidad Geoestadística & $\checkmark$ & \textit{Urban:} $\ge$ 2{,}500 people or seat of power. \newline \colorbox{teal!15}{\strut\textit{Rural:} $<$ 2{,}500 people (point-based).} \\
+    AGEB & Área Geoestadística Básica & $\checkmark$ & \colorbox{teal!15}{\strut\textit{Urban:} Nested in localities; 1--50 blocks.} \newline \textit{Rural:} Large polygon (avg.\ 10k ha). \\
+    Manzana & Manzana Geoestadística & $\times$ & Smallest unit. Defined by streets/features. Mostly used in urban contexts. \\
     \bottomrule
   \end{tabularx}
 \end{table}
 
-In the end, the locality-level dataset had 189,433 entries and the AGEB-level dataset had 64,313 entries. However, not all these entries could be used for the final training/testing set, which was limited by what shapefile polygons I had access to (discussed in Section \ref{subsub:shpsource}).
+For context on the size of these census datasets, the locality-level dataset for 2020 ended up having 189,433 entries and the AGEB-level dataset had 64,313 entries. However, not all these entries could be used for the final training/testing set, which was limited by what shapefile polygons I had access to (discussed in Section \ref{subsub:shpsource}).
 
 \subsubsection{Shapefile Source}
 \label{subsub:shpsource}
 
-The shapefiles corresponding to each year's census data was also downloaded from the INEGI website. Each folder contained shapefiles for all the various geospatial units, but I only focused on the urban AGEB and rural locality level data. Notably, for the 2010 data, there were no shapefile polygons for the rural localities. This limited the size of that dataset (see Table \ref{tab:shapefile_polygon_counts} for full breakdown of each polygon dataset and Figure \ref{fig:polygon_coverage_2010_2020} for a visual of the spatial coverage of the polygon datasets).
+The shapefiles corresponding to each year's census data was also downloaded from the INEGI website. Each folder contained shapefiles for all the various geospatial units, but I only focused on the urban AGEB and rural locality level data. Notably, for the 2010 census, there were no shapefile polygon data for the rural localities. This limited the size of that dataset (see Table \ref{tab:shapefile_polygon_counts} for full breakdown of each polygon dataset and Figure \ref{fig:polygon_coverage_2010_2020} for a visual of the spatial coverage of the polygon datasets).
 
 \begin{table}[H]
   \centering
@@ -234,7 +236,7 @@ The shapefiles corresponding to each year's census data was also downloaded from
 
 \subsubsection{Merging the Census Data with the Shapefiles}
 
-The next step was to clean the census data and merge it with the shapefiles. To help merge the data, I created the CVEGEO item (see Table~\ref{tab:cvegeo_structure}), which is a unique identifier for each polygon. To clean the census data, I only retained population-relevant columns and also computed log-transformed population measures to help handle the heavily skewed distribution of population data (see Figure \ref{fig:eda_raw_popden_population_linear_logx} in Section \ref{subsub:eda} below). To account for the case that population is 0 (and avoid degenerate cases), I calculated $\ln{(popden + 1)}$.
+The next step was to clean the census data and merge it with the shapefiles. To help merge the data, I created the CVEGEO item (see Table~\ref{tab:cvegeo_structure}), which is a unique identifier for each polygon. To clean the census data, I only retained population-relevant columns and also computed log-transformed population measures to help handle the heavily skewed distribution of population data (see Figure \ref{fig:eda_raw_popden_population_linear_logx} in Section \ref{subsub:eda} below). To account for the degenerate case that population is 0, I calculated $\ln{(popden + 1)}$ every time I refer to log-transformed population measures.
 
 \begin{table}[H]
   \centering
@@ -253,13 +255,13 @@ The next step was to clean the census data and merge it with the shapefiles. To 
   \end{tabularx}
 \end{table}
 
-I went to QGIS to load in the shapefiles alongside the cleaned census data CSVs and then joined the layers together. This produced a single shapefile with the population data attached to each polygon.
+I used QGIS to load in the shapefiles alongside the cleaned census data CSVs and then joined the layers together. This produced a single shapefile with the population data attached to each polygon.
 
-After merging, I calculated the area of each polygon in square kilometers and also calculated the population density by dividing the total population of a polygon by the area of the polygon. This value was also then log-transformed to help with the skewed distribution of population data. I use the population density rather than absolute population because the polygon areas for urban AGEB and rural localities varied drastically (on the low end, some polygons had area of 0.0003 square km; on the high end, 36.4128 square km).
+After merging, I calculated the area of each polygon in square kilometers and also calculated the population density by dividing the total population of a polygon by the area of the polygon. This value was also then log-transformed to help with the skewed distribution of population data. I use the population density rather than absolute population because the polygon areas for urban AGEB and rural localities varied drastically (min. area: 0.0003 square km; max. area: 36.4128 square km).
 
 \subsubsection{Exploratory Data Analysis}
 \label{subsub:eda}
-The need to log the population and population-density targets became clear when plotting both labels on their original scales vs. log scales. Under a linear horizontal axis, the histograms positive skewness and concentrate almost all mass at the left. A $\log_{10}$-scaled axis, however, linearizes the relationship and reveals the underlying distribution of the right tail, ensuring that high-density urban outliers do not disproportionately dominate the model (Figure~\ref{fig:eda_raw_popden_population_linear_logx}).
+The need to log the population and population-density targets became exceptionally clear when plotting both labels on their original scales vs. log scales. Under a linear horizontal axis, the histograms positive skewness and concentrate almost all mass at the left. A $\log_{10}$-scaled axis, however, linearizes the relationship and reveals the underlying distribution of the right tail, ensuring that high-density urban outliers do not disproportionately dominate the model (Figure~\ref{fig:eda_raw_popden_population_linear_logx}).
 
 The following analysis was performed on the 2020 census dataset, but similar analysis can be performed on the 2010 census dataset and similar results were observed.
 
@@ -327,21 +329,21 @@ Another interesting observation was that while the number of polygons available 
 
 \subsection{AlphaEarth and Clay foundation models}
 \label{subsec:alphaearth_clay}
-The AlphaEarth Foundation model and the Clay foundation model (v1.0) for Earth data provided the two sources of the geospatial embeddings for this project. Clay is applied to both 2010 and 2020 census data, while AlphaEarth is only applied to 2020 because its embedding data only stretches back to 2017.
+The AlphaEarth Foundation model and the Clay foundation model (v1.0) for Earth data provided the two sources of the geospatial embeddings for this project. Clay is applied to both 2010 and 2020 census data, while AlphaEarth is only applied to 2020 because its embedding data only stretches back to 2017 \parencite{Brownetal2025}.
 
 \subsubsection{What are Embeddings?}
-Vision transformer embeddings encode the physical and structural characteristics of a place as observed from satellite—impervious surface density, building morphology, road network complexity, vegetation patterns, and spectral signatures of land cover. Formally, an embedding is a low-dimensional numerical vector ($d \in [64, 768]$ in this study) that serves as a compressed latent representation of the high-dimensional raw pixel data. These vectors are learned through self-supervised pretraining on millions of unlabeled satellite tiles, where the models are tasked with reconstructing masked patches or predicting temporal consistency. By solving these auxiliary tasks, the foundation model develops a robust understanding of the Earth's surface. For population estimation, this means that the model automatically distills the visual cues of human settlement (e.g., the texture of rooftops or the geometry of street grids) into a feature space that downstream supervised heads can easily map to demographic counts. This approach bypasses the need for manual feature engineering and enables the transfer of knowledge from global-scale datasets to the specific context of Mexico's census geography.
+Vision transformer embeddings encode the physical and structural characteristics of a place as observed from satellite, including impervious surface density, building morphology, road network complexity, vegetation patterns, and spectral signatures of land cover. Formally, an embedding is a low-dimensional numerical vector ($d \in [64, 768]$ for AlphaEarth and Clay in this study) that serves as a compressed latent representation of the high-dimensional raw pixel data. These vectors are learned through self-supervised pretraining on millions of unlabeled satellite tiles, where the models are tasked with reconstructing masked patches or predicting temporal consistency. By solving these auxiliary tasks, the foundation model develops a robust understanding of the Earth's surface. For population estimation, this means that the model automatically distills the visual cues of human settlement (e.g., the texture of rooftops or the geometry of street grids) into a feature space that downstream supervised heads can easily map to demographic counts. This approach bypasses the need for manual feature engineering and enables the transfer of knowledge from global-scale datasets to the specific context of Mexico's census geography.
 
 \subsubsection{Key Model Differences}
-\paragraph{Resolution.}
-Although both pipelines ingest multispectral satellite imagery, they rely on different missions and therefore different native pixel footprints. AlphaEarth's stack reaches up to roughly \textbf{10\,m} sampling where Sentinel-class bands permit it. The Clay workflow implemented here feeds \textbf{30\,m} Landsat-7 surface reflectance (and thermal) bands, so each Clay pixel integrates roughly nine AlphaEarth-native pixels on a side before any downstream resampling or aggregation.
+\paragraph{Pixel resolution.}
+Although both pipelines ingest multispectral satellite imagery, they rely on different missions and therefore different native pixel footprints. AlphaEarth's stack reaches up to roughly \emph{10\,m} sampling where Sentinel-class bands permit it. The Clay workflow implemented here feeds \emph{30\,m} Landsat-7 surface reflectance (and thermal) bands, so each Clay pixel integrates roughly nine AlphaEarth-native pixels on a side before any downstream resampling or aggregation.
 
 \paragraph{Accessing embeddings.}
-Another difference pertains to how to access the embeddings from each model:
+Another difference pertains to how I accessed the embeddings from each model:
 \begin{itemize}
   \item AlphaEarth works through a query-based system. The model's outputs are already stored as an Image Collection on Google Earth Engine, and users can request the embedding value for a geometry (or specific latitude, longitude) and timestamp.
 
-  \item Clay, conversely, has a more decentralized workflow that involves downloading pre-trained weights from HuggingFace\footnote{The weights can be accessed online at this link: \url{https://huggingface.co/made-with-clay/Clay}.} and setting up a PyTorch environment to perform offline inference. Users pass through input chips (typically $128 \times 128$ pixel patches) into the Clay model's vision transformer (see Figure \ref{fig:rgb_chips_examples} for what an image chip looks like). These input chips are split into a $16 \times 16$ grid of patches, which are each $8\times 8$ pixels. For each of these $8 \times 8$ pixel patches---corresponding to roughly $240\times 240$\,m on the ground at Landsat's 30\,m sampling---the model returns a 768-dimensional embedding vector (Figure~\ref{fig:clay_pipeline} diagrams this tensor geometry). Pre-processing Mexico into annual composites, tiling chips, and batching patches shifts compute responsibility onto the user.
+  \item Clay, conversely, has a more decentralized workflow that involves downloading pre-trained weights from HuggingFace\footnote{The weights can be accessed online at this link: \url{https://huggingface.co/made-with-clay/Clay}.} and setting up a PyTorch environment to perform offline inference. Users crop the satellite image into input chips (in this case, $128 \times 128$ pixel patches) that they pass into the Clay model's vision transformer (see Figure \ref{fig:rgb_chips_examples} for what an image chip looks like). These input chips are split into a $16 \times 16$ grid of patches, which are each $8\times 8$ pixels ($8 \times 16 = 128$). For each of these $8 \times 8$ pixel patches---corresponding to roughly $240\times 240$\,m on the ground at Landsat's 30\,m sampling---the model returns a 768-dimensional embedding vector (Figure~\ref{fig:clay_pipeline} diagrams this tensor geometry). The compute responsibility for pre-processing Mexico into annual composites, tiling chips, and batching patches is shifted onto the user.
 \end{itemize}
 
 
@@ -447,11 +449,11 @@ Another difference pertains to how to access the embeddings from each model:
     \vspace{0.25em}
     {\footnotesize Urban example (\texttt{chip\_117931}).}
   \end{minipage}
-  \caption{Illustrative RGB input chips (2020) spanning rural and urban contexts. Each panel shows a $128\times128$-pixel chip extracted from the imagery stack and rendered as an RGB composite. For visualization, each channel is linearly scaled using a 2nd--98th percentile stretch computed within the chip.}
+  \caption{Illustrative RGB input chips (2020) spanning rural and urban contexts. Each panel shows a $128\times128$-pixel input chip extracted from the Landsat-7 imagery stack and rendered as an RGB composite. For visualization, each channel is linearly scaled using a 2nd--98th percentile stretch computed within the chip.}
   \label{fig:rgb_chips_examples}
 \end{figure}
 
-Figure~\ref{fig:rgb_chips_examples} shows two representative chips from the 2020 pipeline. The rural chip is dominated by vegetation and bare earth with sparse road structure; the urban chip shows dense rectilinear patterns, bright impervious surfaces, and sharp edges. These visual contrasts illustrate why foundation-model embeddings support population-density prediction: raw imagery encodes settlement intensity in ways the encoder can compress into useful features.
+Figure~\ref{fig:rgb_chips_examples} shows two representative chips from the 2020 pipeline. The rural chip is dominated by vegetation and bare earth with sparse road structure. The urban chip shows dense rectilinear patterns, bright impenetrable surfaces, and sharp edges. These visual contrasts suggest that raw imagery encodes settlement intensity in ways the encoder can compress into useful features and provides intuition for why foundation-model embeddings can support population-density prediction.
 
 Table~\ref{tab:alphaearth_clay_summary} below summarizes several practical contrasts.
 
@@ -477,29 +479,29 @@ Table~\ref{tab:alphaearth_clay_summary} below summarizes several practical contr
 \subsubsection{Data Pipelines for Embedding Extraction}
 
 \paragraph{AlphaEarth.}
-Because I wrote a lot of code to interface with Google Earth Engine, I could simply load in the AlphaEarth embeddings just by specifying the \texttt{GOOGLE/SATELLITE\_EMBEDDING/\allowbreak V1/ANNUAL} image collection for the relevant year and specifying the relevant geometries to retrieve data for.
+Since I wrote code to interface with the Google Earth Engine, I could simply load in the AlphaEarth embeddings just by specifying the \texttt{GOOGLE/SATELLITE\_EMBEDDING/\allowbreak V1/ANNUAL} image collection for the relevant year and geometries to retrieve data for.
 
 \paragraph{Clay.}
-The Clay model, on the other hand, worked locally on my machine and I could not rely on the ease of Google Earth Engine to retrieve the embeddings. Instead, I had to download the cloud-masked composite images for the relevant year and feed them into the Clay model. To create these composites, I processed Landsat-7 (Collection 2, Level 2) imagery for Mexico through a pipeline of radiometric calibration, bitwise quality masking, and temporal aggregation:\footnote{the specific code for this can be found in my project's GitHub repository.}
+The Clay model, on the other hand, worked locally on my machine and I could not rely on the ease of Google Earth Engine to retrieve the embeddings. Instead, I had to download the cloud-masked composite images for the relevant year and feed them into the Clay model. To create these composites, I processed Landsat-7 (Collection 2, Level 2) imagery for Mexico through a pipeline of radiometric calibration, bitwise quality masking, and temporal aggregation:\footnote{The specific code for this can be found in my project's GitHub repository, which is linked in Section \ref{subsub:computational}.}
 \begin{itemize}
-  \item Optical and thermal bands were scaled using USGS Collection 2 factors ($0.0000275$ gain/$-0.2$ offset and $0.00341802$ gain/$149.0$ offset, respectively) to derive physical surface reflectance and temperature.
+  \item Scaled optical and thermal bands using USGS Collection 2 factors ($0.0000275$ gain/$-0.2$ offset and $0.00341802$ gain/$149.0$ offset, respectively) to derive physical surface reflectance and temperature.
   \item Applied an enhanced quality mask via the \texttt{QA\_PIXEL} and \texttt{QA\_RADSAT} bands, utilizing a bitwise AND operation on the first five bits to exclude clouds, shadows, and water while filtering for radiometric saturation.
   \item Applied a temporal median reducer at $30\,\mathrm{m}$ resolution to minimize atmospheric noise and outliers that may appear on an arbitrary day.
 \end{itemize}
 
 \paragraph{Landsat continuity (Landsat-7 vs Landsat-8).}
-Despite Landsat-8 being launched into orbit in 2013 and thus available to be used for the 2020 datasets, I chose to stick with Landsat-7 (launched in 1999) for the analysis of both 2020 and 2010 to keep consistency across the results. The one drawback is that Landsat-8 offers enhanced signal-to-noise performance and 12 bands rather than the 8 of Landsat-7.
+Despite Landsat-8 being launched into orbit in 2013 and thus available to be used for the 2020 datasets, I chose to stick with Landsat-7 (launched in 1999) for the analysis of both 2020 and 2010 census labels to keep consistency across the results. The one drawback of this approach is that I lose out on Landsat-8's enhanced signal-to-noise performance and increased set of bands compared to Landsat-7 (specifically, 12 vs. 8 bands). 
 
 
 
 \subsection{Analysis/Prediction Pipeline}
 
-After constructing polygon-level foundation-model embeddings, I trained two supervised prediction heads that map embeddings (and a small set of geographic covariates) to the target, $\ln(\text{population density})$. The first head is \emph{ridge regression} (linear least squares with an $\ell_2$ penalty). The second is \emph{XGBoost}, a gradient-boosted ensemble of regression trees. I use both because they offer a transparent linear baseline and a flexible nonlinear alternative while remaining computationally tractable on a hundred thousand polygons.
+After constructing polygon-level foundation model embeddings, I trained two supervised prediction heads that map embeddings (and a set of geographic covariates) to the target, $\ln(\text{population density})$. The first head is \emph{ridge regression} (linear least squares with an $\ell_2$ penalty). The second is \emph{XGBoost}, a gradient-boosted ensemble of regression trees. I use both because they offer a transparent linear baseline and a flexible nonlinear alternative while remaining computationally tractable on a hundred thousand polygons.
 
 \subsubsection{Features and Target Variable}
-For each polygon $p$, let $y_p$ denote population density (persons per unit area, consistent with the merged census fields) and let $A_p \in \mathbb{R}^{d}$ denote the embedding vector produced by the chosen foundation model after any required aggregation to the polygon. In the AlphaEarth experiments reported here, $d=64$; Clay produces higher-dimensional patch-level representations, which I aggregate to a single polygon-level vector of dimension $d$ before feeding the same prediction pipeline. 
+For each polygon $p$, let $y_p$ denote population density (persons per unit area, consistent with the merged census fields) and let $A_p \in \mathbb{R}^{d}$ denote the embedding vector produced by the chosen foundation model after any required aggregation to the polygon. For the AlphaEarth experiments, $d=64$; Clay produces higher-dimensional patch-level representations $d=768$.
 
-To account for state-level heterogeneity (e.g., regional governance, historical development, or cultural settlement drivers that physical satellite imagery may miss) that is not captured by satellite embeddings alone, I include a compact set of state fixed effects via binary indicators. To avoid perfect collinearity with the intercept in the linear ridge model, state $1$ is taken as the omitted category. Let $\mathrm{CVE\_ENT}_p \in \{1,\ldots,32\}$ identify the polygon's state (Mexico's 32 federal entities), the included indicators are thus $\textbf{1}\{\mathrm{CVE\_ENT}_p=j\}$ for $j=2,\ldots,32$.
+To account for state-level heterogeneity (e.g., regional governance, historical development, or cultural settlement drivers) that is not captured by satellite embeddings alone, I include a compact set of state fixed effects via binary indicators. To avoid perfect collinearity with the intercept in the linear ridge model, state $1$ is taken as the omitted category. Let $\mathrm{CVE\_ENT}_p \in \{1,\ldots,32\}$ identify the polygon's state (Mexico's 32 federal entities), the included indicators are thus represented by: $\textbf{1}\{\mathrm{CVE\_ENT}_p=j\}$ for $j=2,\ldots,32$.
 
 The regression target is always the natural log of population density, $\ln y_p$, consistent with the heavy-tailed distributions documented in Section~\ref{subsub:eda}. When reporting fit on the original scale (e.g., for interpretation of errors in ``people per unit area''), predictions are transformed with the exponential map and evaluated alongside the log-scale fit.
 
@@ -531,6 +533,8 @@ where $s_p$ stacks the state indicators described above and $\alpha>0$ imposes $
   + \varepsilon_p .
 \end{equation}
 
+Note that the $\ell_2$ regularization is used to manage the multicollinearity inherent in the embedding dimensions, which would otherwise lead to unstable OLS estimates with high variance.
+
 \subsubsection{XGBoost (eXtreme Gradient Boosting)}
 \label{subsub:xgboost}
 XGBoost represents a complementary nonlinear head. Rather than a single linear functional form, it approximates $\ln y_p$ with an additive ensemble of $K$ shallow regression trees $\{f_k\}_{k=1}^{K}$,
@@ -542,15 +546,17 @@ XGBoost represents a complementary nonlinear head. Rather than a single linear f
 where each $f_k$ is a weak learner constrained by tree depth, row subsampling, and column subsampling to reduce variance. In practice, the same state indicators enter the tree model as additional binary splits alongside the continuous embedding coordinates, allowing interactions between spectral structure and broad geography without hand-specifying feature crosses.
 
 \subsubsection{Hyperparameter Tuning}
+Hyperparameter optimization is essential for calibrating the complexity of the regression heads against the high-dimensional feature space provided by the embeddings. I tuned as follows:
+
 \paragraph{Clay.} Ridge regression used grid search over the regularization strength $\alpha$; XGBoost used random search with 100 trials over continuous ranges. The full search spaces and strategies are listed in Table~\ref{tab:hyperparameters} in Appendix~\ref{app:hyperparameters}.
 
-\paragraph{AlphaEarth.} Ridge regression used randomized search with 40 trials over the regularization strength $\alpha$ (log-uniform on $[10^{-3}, 10^{4}]$); XGBoost used randomized search with 30 trials over a discrete hyperparameter grid; both used 3-fold cross-validation (mean $R^2$) on an 80/20 training split of the combined embedding table for $\log$ population density. The full search spaces and strategies are listed in Table~\ref{tab:hyperparameters_alphaearth} in Appendix~\ref{app:hyperparameters}.
+\paragraph{AlphaEarth.} Ridge regression used randomized search with 40 trials over the regularization strength $\alpha$; XGBoost used randomized search with 30 trials over a discrete hyperparameter grid; both used 3-fold cross-validation (mean $R^2$). The full search spaces and strategies are listed in Table~\ref{tab:hyperparameters_alphaearth} in Appendix~\ref{app:hyperparameters}.
 
-Table~\ref{tab:final_parameters} reports the best hyperparameters selected under 5-fold cross-validation (split \texttt{kfold5\_seed0}) for the embedding-only head on $\ln(\text{population density})$, shown separately for the 2010 and 2020 training configurations.
+Table~\ref{tab:final_parameters} reports the best hyperparameters selected under 5-fold cross-validation  on log population density, shown separately for the 2010 and 2020 training configurations.
 
 \begin{table}[H]
   \centering
-  \caption{Best-tuned prediction-head hyperparameters by census year (5-fold CV, seed 0, \texttt{emb} feature set). Floating-point entries are rounded to four decimal places.}
+  \caption{Best-tuned prediction-head hyperparameters by census year (5-fold CV, seed 0, embedding-only feature set). Floating-point entries are rounded to four decimal places.}
   \label{tab:final_parameters}
   \renewcommand{\arraystretch}{1.12}
   \setlength{\tabcolsep}{10pt}
@@ -583,12 +589,12 @@ Table~\ref{tab:final_parameters} reports the best hyperparameters selected under
 
 The empirical scores reported in this thesis come from a common evaluation harness that fits the prediction heads and computes out-of-sample metrics under cross-validation.
 
-\paragraph{Evaluation metrics.} I report three standard regression metrics, always computed by comparing predictions $\hat{y}$ to the corresponding realized targets $y$:
+\paragraph{Evaluation metrics.} I report four standard regression metrics, always computed by comparing predictions $\hat{y}$ to the corresponding realized targets $y$:
 \begin{table}[H]
   \centering
-  \caption{Evaluation metrics used throughout this thesis.}
+  \caption{Evaluation metrics used throughout the analysis.}
   \label{tab:eval_metrics_code}
-  \renewcommand{\arraystretch}{1.15}
+  \renewcommand{\arraystretch}{2.2}
   \setlength{\tabcolsep}{10pt}
   \begin{tabular}{@{}ll@{}}
     \toprule
@@ -596,6 +602,8 @@ The empirical scores reported in this thesis come from a common evaluation harne
     \midrule
     $R^2$ (coefficient of determination) &
     $1 - \dfrac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}$ \\
+    Pearson $r$ (correlation coefficient) & 
+    $\dfrac{\sum_{i=1}^{n} (y_i - \bar{y})(\hat{y}_i - \bar{\hat{y}})}{\sqrt{\sum_{i=1}^{n} (y_i - \bar{y})^2} \sqrt{\sum_{i=1}^{n} (\hat{y}_i - \bar{\hat{y}})^2}}$ \\
     MAE (mean absolute error) &
     $\dfrac{1}{n}\sum_{i=1}^{n} \lvert y_i - \hat{y}_i \rvert$ \\
     RMSE (root mean squared error) &
@@ -604,15 +612,11 @@ The empirical scores reported in this thesis come from a common evaluation harne
   \end{tabular}
 \end{table}
 
-\paragraph{Target scale.} Unless noted otherwise, the target is \texttt{log\_popden} (natural log of population density). MAE and RMSE are therefore reported in \emph{log units} unless predictions are explicitly inverse-transformed. To inverse-transform, I used an exponential map: $\exp(\hat{y})$.
+\paragraph{Target scale.} Unless noted otherwise, the target is \texttt{log\_popden} (natural log of population density). MAE and RMSE are therefore reported in log units unless predictions are explicitly inverse-transformed. To inverse-transform, I used an exponential map: $\exp(\hat{y})$.
 
 Thus, $R^2_{\ln}$ is evaluated on the scale actually used in training and therefore captures whether embeddings organize variation in log density itself. $R^2_{\mathrm{orig}}$ offers an intuitive link to people-per-unit-area outcomes but can be dominated by a minority of extremely dense polygons and should always be read together with $R^2_{\ln}$, not in isolation.
 
-\paragraph{Cross-validation and out-of-fold prediction.} Reported scores are out-of-fold (OOF): each row's prediction is generated by a model that did not train on that row. I use two validation schemes:
-\begin{itemize}
-  \item {Shuffled $K$-fold CV} (default; $K=5$)
-  \item {Leave-one-state-out} CV (each fold holds out one state)
-\end{itemize}
+\paragraph{Cross-validation and out-of-fold prediction.} Reported scores are out-of-fold (OOF), meaning each row's prediction is generated by a model that did not train on that row. Specifically, I default to using a shuffled $K$-fold cross-validation, with $K=5$.
 
 Figure~\ref{fig:fold_map_cdmx} visualizes the shuffled 5-fold assignment for urban AGEBs in Mexico City. Since folds are assigned randomly at the polygon level, nearby neighborhoods are typically interleaved across folds rather than forming contiguous uniform blocks. This illustrates why shuffled $K$-fold is best interpreted as a general out-of-sample check under the observed spatial mix.
 
@@ -633,7 +637,7 @@ Figure~\ref{fig:fold_map_cdmx} visualizes the shuffled 5-fold assignment for urb
 \subsubsection{Overview of Empirical Experiments}
 \label{subsec:experiment-overview}
 
-This project organizes supervised runs that reuse the same ridge and XGBoost heads but vary the embedding source, label census year, spatial aggregation, and (for Clay) temporal linkage between 2010 and 2020. Table~\ref{tab:experiment_overview} lays out a guide to the empirical experiments run. It avoids numeric scores (those appear in the Results tables and figures) and instead states what each family of runs is trying to isolate.
+This project organizes supervised runs that reuse the same ridge and XGBoost heads but vary the embedding source, label census year, spatial aggregation, and (for Clay) temporal linkage between 2010 and 2020. Table~\ref{tab:experiment_overview} lays out a guide to the empirical experiments run. It avoids numeric scores (those appear in the Section \ref{sec:results} tables and figures) and instead states what each family of runs is trying to isolate.
 
 \begin{table}[H]
   \centering
@@ -683,7 +687,9 @@ This project organizes supervised runs that reuse the same ridge and XGBoost hea
 
 \paragraph{Software stack (Python).} Downstream supervised modeling and evaluation---ridge and XGBoost heads, randomized hyperparameter search, $K$-fold cross-validation, and municipality rollups---were implemented in Python~3 using \texttt{conda}-style environments on the cluster and locally. Core libraries included \texttt{numpy} and \texttt{pandas} for tabular data; \texttt{scikit-learn} for pipelines, \texttt{Ridge}, \texttt{StandardScaler}, cross-validation, and metrics; \texttt{scipy} for sampling distributions in search; \texttt{xgboost} for gradient-boosted trees; and \texttt{joblib} for persisting fitted models. Clay encoder inference used \texttt{torch} with CUDA together with the Clay model codebase as released by Radiant Earth; exploratory analysis and figure generation used \texttt{jupyter} notebooks. Tabular merges and all regression experiments that consumed AlphaEarth embeddings began from the Earth Engine exports described above.
 
-\paragraph{Hardware and scheduling.} Computationally intensive steps (especially rolling foundation-model encoders over large stacks of satellite tiles) were run on Yale Research Computing's Bouchet cluster. Jobs were submitted with SLURM (\texttt{sbatch}). Clay embedding extraction used the GPU partition with CUDA-capable NVIDIA GPUs. Auxiliary cluster tasks that did not require inference (for example spatial aggregation of cell embeddings to census polygons) ran on CPU nodes in the same environment.
+\paragraph{Hardware and scheduling.} Computationally intensive steps (especially applying foundation-model encoders over large stacks of satellite tiles) were run on Yale Research Computing's Bouchet cluster. Jobs were submitted with SLURM (\texttt{sbatch}). Clay embedding extraction used the GPU partition with CUDA-capable NVIDIA GPUs. Auxiliary cluster tasks that did not require inference (for example spatial aggregation of cell embeddings to census polygons) ran on CPU nodes in the same environment.
+
+\paragraph{Code availability.} To support the reproducibility of this thesis, all source code for the AlphaEarth and Clay foundation model pipelines---including scripts for Google Earth Engine data preparation, model training, evaluation, and figure generation---is available on GitHub at \url{https://github.com/henryjchen/cs-econ-thesis}. Please reach out to \href{mailto:henry.chen@yale.edu}{henry.chen@yale.edu} if you have any questions.
 
 
 \newpage
@@ -691,12 +697,12 @@ This project organizes supervised runs that reuse the same ridge and XGBoost hea
 \section{Results}
 \label{sec:results}
 
-This section presents the empirical findings from the aforementioned experiments (Section \ref{subsec:experiment-overview}). It presents scalar benchmark scores across embeddings and spatial scales; graphical calibration checks; regional error patterns at the state level; and Clay-specific temporal experiments linking the 2010 encoder to 2020 labels and decadal change on matched polygons. Unless noted otherwise, every prediction is done out-of-fold, meaning that the observation being scored never participated in fitting the head that produced its prediction.
+This section presents the empirical findings from the aforementioned experiments (Section \ref{subsec:experiment-overview}). It presents scalar benchmark scores across embeddings and spatial scales; graphical calibration checks, regional error patterns at the state level, and Clay-specific temporal experiments linking the 2010 encoder to 2020 labels and decadal change on matched polygons. Unless noted otherwise, every prediction is done out-of-fold.
 
 
 \subsection{Out-of-Fold Prediction Performance}
 
-Table~\ref{tab:results_embedding_comparison} helps answer our first research question (Section \ref{sub:researchque}), showing how much cross-sectional variation in population density can ridge regression and XGBoost explain across AlphaEarth and Clay embeddings. Ridge regression and XGBoost are run with the specifications from Section \ref{subsub:ridge} and \ref{subsub:xgboost}, respectively.
+Table~\ref{tab:results_embedding_comparison} helps answer our first research question (Section \ref{sub:researchque}) by showing how much cross-sectional variation in population density Ridge regression and XGBoost can explain across AlphaEarth and Clay embeddings. Ridge regression and XGBoost are run with the specifications from Section \ref{subsub:ridge} and \ref{subsub:xgboost}, respectively.
 
 \begin{table}[H]
   \centering
@@ -707,20 +713,20 @@ Table~\ref{tab:results_embedding_comparison} helps answer our first research que
   \setlength{\tabcolsep}{5pt}
   \begin{tabular}{@{} l l cccc @{}}
     \toprule
-    \textbf{Embedding setup} & \textbf{Head} &
-    \multicolumn{2}{c}{\textbf{Polygon level (AGEB and Localities)}} &
+    \textbf{Embedding setup} & \textbf{Head} & 
+    \multicolumn{2}{c}{\textbf{Polygon level (AGEB and localities)}} & 
     \multicolumn{2}{c}{\textbf{Municipality level}} \\
     \cmidrule(lr){3-4}\cmidrule(lr){5-6}
     & & $R^2_{\ln}$ & $R^2_{\mathrm{orig}}$ & $R^2_{\ln}$ & $R^2_{\mathrm{orig}}$ \\
     \midrule
     AlphaEarth (2020 labels) & Ridge    & 0.629 & 0.589 & 0.691 & 0.757 \\
-                             & XGBoost  & \cellcolor{teal!15}\textbf{0.727} & \cellcolor{teal!15}\textbf{0.701} & \cellcolor{teal!15}\textbf{0.879} & \cellcolor{teal!15}\textbf{0.898} \\
+                             & XGBoost  & \cellcolor{teal!15}{0.727} & \cellcolor{teal!15}{0.701} & \cellcolor{teal!15}{0.879} & \cellcolor{teal!15}{0.898} \\
     \addlinespace[2pt]
-    Clay (2020 labels)       & Ridge    & 0.490 & 0.114 & 0.742 & 0.698 \\
-                             & XGBoost  & 0.588 & 0.157 & 0.763 & 0.767 \\
+    Clay (2020 labels)       & Ridge    & 0.513 & 0.118 & 0.644 & 0.415 \\
+                             & XGBoost  & 0.609 & 0.169 & 0.749 & 0.753 \\
     \addlinespace[2pt]
-    Clay (2010 labels)       & Ridge    & 0.567 & 0.522 & 0.708 & 0.699 \\
-                             & XGBoost  & 0.623 & 0.644 & 0.691 & 0.628 \\
+    Clay (2010 labels)       & Ridge    & 0.581 & 0.529 & 0.631 & 0.426 \\
+                             & XGBoost  & 0.629 & 0.654 & 0.725 & 0.748 \\
     \bottomrule
   \end{tabular}
 
@@ -730,7 +736,7 @@ Table~\ref{tab:results_embedding_comparison} helps answer our first research que
 \end{table}
 
 
-AlphaEarth attains the strongest polygon-scale scores in the table for both prediction heads. Clay with 2020 imagery trails materially at the polygon level---particularly on ridge's linear-scale $R^2_{\mathrm{orig}}$---yet narrows part of the gap once predictions aggregate to the municipality level. This is consistent with noise averaging across coarse geography. 
+AlphaEarth attains the strongest polygon-scale scores in the table for both prediction heads. Clay with 2020 imagery trails materially at the polygon level---particularly on Ridge's linear-scale $R^2_{\mathrm{orig}}$---yet narrows part of the gap once predictions aggregate to the municipality level. This is consistent with noise averaging across coarse geography. 
 
 Clay paired with 2010 labels performs better than Clay with 2020 labels but worse than AlphaEarth at the polygon level. This suggests that the more uniform training / evaluation set of 2010 (which is just urban AGEBs and does not include rural locality points) might make it easier for the model to perform at the most granular levels. Despite this, Clay 2020 outperforms Clay 2010 at the municipality level, likely because municipalities include both AGEB and localities, so the 2010 set not including locality data will overlook this aspect of the municipality's characteristics.
 
@@ -744,11 +750,11 @@ To move beyond aggregate metrics, we visualize polygon-level predictions for thr
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\textwidth]{figs/case_study_actual_vs_predicted.pdf}
-  \caption{Actual (top row) versus predicted (bottom row) $\ln(\text{population density})$ for the municipalities of Monterrey, Querétaro, and Cancún. Color encodes $\ln(\text{pop.\ density})$ on a shared viridis scale (0--14). Statistics report within-municipality $R^2$ and sample size. 2020 census data.}
+  \caption{Actual (top row) versus predicted (bottom row) $\ln(\text{population density})$ for the municipalities of Monterrey, Querétaro, and Cancún. Color encodes $\ln(\text{pop.\ density})$ on a shared viridis scale (0--14). Statistics report within-municipality $R^2$ and sample size. 2020 census data. Color scale shows log population density.}
   \label{fig:case_study_cs}
 \end{figure}
 
-Across all three cities the model reproduces the broad intra-urban density gradient---high-density residential cores appear in yellow-green, while peripheral and industrial zones transition to darker blue-green---with close visual correspondence between the actual and predicted maps. Monterrey ($R^2 = 0.729$, $n = 478$) displays the characteristic north--south density spine of its metropolitan corridor, which the model captures faithfully despite considerable morphological heterogeneity between the dense centro and the sprawling southern suburbs. Querétaro ($R^2 = 0.697$, $n = 493$) presents a radial density decay from its colonial core; the predicted map correctly identifies the low-density industrial parks ringing the city as well as the denser satellite neighborhoods to the south. Cancún ($R^2 = 0.751$, $n = 423$) is perhaps the most visually striking match: the model distinguishes the high-density hotel zone peninsula from the lower-density residential grid to the west and the near-empty lagoon parcels, suggesting that AlphaEarth embeddings encode fine-grained land-cover cues---built-up shoreline versus mangrove---that translate directly into density predictions.
+Across all three cities the model reproduces the broad intra-urban density gradient---high-density residential cores appear in yellow-green, while peripheral and industrial zones transition to darker blue-green---with close visual correspondence between the actual and predicted maps. Monterrey ($R^2 = 0.729$, $n = 478$) displays the characteristic north--south density spine of its metropolitan corridor, which the model captures faithfully despite considerable morphological heterogeneity between the dense center and the sprawling southern suburbs. Querétaro ($R^2 = 0.697$, $n = 493$) presents a radial density decay from its colonial core; the predicted map correctly identifies the low-density industrial parks ringing the city as well as the denser satellite neighborhoods to the south. Cancún ($R^2 = 0.751$, $n = 423$) is perhaps the most visually striking match. The model is able to distinguish the high-density hotel zone peninsula from the lower-density residential grid to the west and the near-empty lagoon parcels, suggesting that AlphaEarth embeddings encode fine-grained land-cover cues (like built-up shoreline vs. mangrove) that translate directly into density predictions.
 
 These case studies illustrate that the aggregate $R^2$ values reported in Table~\ref{tab:results_embedding_comparison} are not driven solely by between-state variation; the foundation model embeddings contain sufficient spatial information to recover density patterns \emph{within} individual cities, across a range of urban morphologies and climatic zones.
 
@@ -812,7 +818,7 @@ See Appendix \ref{appendix:state_level_figures} for figures on the mean absolute
 \begin{figure}[H]
   \centering
   \includegraphics[width=\linewidth]{figs/spatial_state_r2.png}
-  \caption{State choropleths of polygon-scale out-of-fold $R^2$ on $\ln(y)$ (left to right: AlphaEarth 2020, Clay 2020, Clay 2010). Top row: Ridge; bottom row: XGBoost. A shared green-to-red color scale is used across all panels for direct comparison. Green indicates higher $R^2$; red indicates lower $R^2$.}
+  \caption{State choropleths of polygon-scale out-of-fold $R^2$ on $\ln(y)$ (left to right: AlphaEarth 2020, Clay 2020, Clay 2010). Top row: Ridge; bottom row: XGBoost. A shared green-to-red color scale is used across all panels for direct comparison. Color scale represents $R^2$: green indicates higher $R^2$; red indicates lower $R^2$.}
   \label{fig:spatial_state_r2}
 \end{figure}
 
@@ -834,11 +840,11 @@ The above sections have revealed that prediction quality varies across states. T
     \toprule
     \textbf{Characteristic} & \textbf{Avg Pearson r} & \textbf{r Std Dev} & \textbf{Times Significant} & \textbf{Significance Rate (\%)} \\ 
     \midrule
-    Median Area (km$^2$) & \cellcolor{teal!15}{+0.560} & 0.065 & 6 & 100.0\% \\
-    Mean Area (km$^2$)   & \cellcolor{teal!15}{+0.537} & 0.079 & 6 & 100.0\% \\
-    Target Variance      & +0.355 & 0.232 & 4 & 66.7\% \\
-    Fraction Urban       & +0.214 & 0.094 & 0 & 0.0\% \\
-    Sample Size ($N$)    & +0.056 & 0.134 & 0 & 0.0\% \\
+    Median Area (km$^2$) & \cellcolor{teal!15}{0.598} & 0.065 & 6 & 100.0\% \\
+    Mean Area (km$^2$)   & \cellcolor{teal!15}{0.582} & 0.081 & 6 & 100.0\% \\
+    Target Variance      & 0.368 & 0.217 & 4 & 66.7\% \\
+    Fraction Urban       & 0.222 & 0.100 & 0 & 0.0\% \\
+    Sample Size ($N$)    & 0.023 & 0.150 & 0 & 0.0\% \\
     \bottomrule
   \end{tabular}
 
@@ -847,11 +853,11 @@ The above sections have revealed that prediction quality varies across states. T
   \textit{Notes:} \colorbox{teal!15}{Highlighted} cells indicate the top-performing characteristics by average Pearson correlation. Significance is determined at the $\alpha = 0.05$ level.
 \end{table}
 
-The strongest predictors of state-level performance are median and mean polygon areas, with average Pearson correlations ($r$) of $+0.56$ and $+0.54$ respectively. Larger polygons contain more satellite pixels, which means that the area-weighted or centroid-sampled embedding aggregated to the polygon has been averaged over a richer spatial context, dampening single-pixel noise. This suggests that the ratio between the spatial support of the remote sensing data and the size of the unit of analysis is an important determinant of model performance. 
+The strongest predictors of state-level performance are median and mean polygon areas, with average Pearson correlations ($r$) of $+0.598$ and $+0.582$ respectively. Larger polygons contain more satellite pixels, which means that the area-weighted or centroid-sampled embedding aggregated to the polygon has been averaged over a richer spatial context, dampening single-pixel noise. This suggests that the ratio between the spatial support of the remote sensing data and the size of the unit of analysis is an important determinant of model performance. 
 
-Within-state target variance of $\ln(\text{population density})$ also played a strong predictive role with a Pearson correlation of $r=+0.355$. Intuitively, states whose polygons exhibit a wider spread of log densities---mixing rural and urban contexts---give the model more signal to separate. 
+Within-state target variance of $\ln(\text{population density})$ also played a strong predictive role with a Pearson correlation of $r=+0.368$. Intuitively, states whose polygons exhibit a wider spread of log densities---mixing rural and urban contexts---give the model more signal to separate. 
 
-In contrast, the number of polygons per state is essentially uncorrelated with $R^2$ ($r = +0.056$), indicating that the models are not simply overfitting to larger states.
+In contrast, the number of polygons per state is essentially uncorrelated with $R^2$ ($r = +0.023$), indicating that the models are not simply overfitting to larger states.
 
 \paragraph{Other Explanations.} Another more qualitative---and more speculative---driver of the performance across states is landscape biome. \emph{Tabasco} consistently ranks as the worst-predicted state. Its landscape is dominated by low-lying wetlands, mangroves, and petroleum infrastructure, which may produce satellite signatures that the geospatial foundation models associates ambiguously with both uninhabited wetland and peri-urban settlement. This could compress the embedding space in a way that confuses the downstream prediction heads.  
 
@@ -871,7 +877,7 @@ Another interesting question is whether there is a systematic bias to the predic
 
 One key observation from this figure is that AlphaEarth is nearly unbiased compared to Clay. Its mean bias ranges from roughly $-0.0007$ to $+0.0007$ for Ridge and $-0.02$ to $+0.01$ for XGBoost. This near-zero systematic bias across all 32 states is consistent with AlphaEarth's higher overall $R^2$ and suggests that the 10\,m embedding captures enough local variation to avoid persistent geographic lean in either direction.
 
-Clay, on the other hand, exhibits substantially larger bias magnitudes (up to $\pm 0.36$ log units under Ridge). Northern industrialized states (e.g., Chihuahua, Nuevo León, and Tlaxcala) are consistently over-predicted, suggesting that the Clay embedding may associate their land-cover signatures (arid terrain, industrial clusters) with higher densities than actually observed. Conversely, southern and coastal states (e.g., Tabasco, Guerrero, Nayarit, and Mexico City (CDMX)) tend to be under-predicted. These directional patterns are broadly stable across both Ridge and XGBoost models, indicating that the bias originates in the embedding representation rather than the prediction head.
+Clay, on the other hand, exhibits substantially larger bias magnitudes (up to $\pm 0.36$ log units under Ridge). Northern industrialized states (e.g., Chihuahua, Nuevo León, and Tlaxcala) are consistently over-predicted, suggesting that the Clay embedding may associate their land-cover signatures (arid terrain, industrial clusters) with higher densities than actually observed. Conversely, southern and coastal states (e.g., Tabasco, Guerrero, Nayarit, and Mexico City) tend to be under-predicted. These directional patterns are broadly stable across both Ridge and XGBoost models, indicating that the bias originates in the embedding representation rather than the prediction head.
 
 
 
@@ -895,6 +901,30 @@ The second research question shifts emphasis from cross-sectional levels to cros
 
 Table~\ref{tab:clay_temporal_cross_year} isolates those protocols for ridge and XGBoost. Rows one and two share the identical matched AGEB intersection ($n\approx 52\mathrm{k}$) and identical randomized five-fold OOF splits so differences isolate feature engineering rather than sample composition. Row three deliberately sacrifices comparable CV discipline for coverage ($n\approx 106\mathrm{k}$).
 
+% \begin{table}[H]
+%   \centering
+%   \caption{Clay cross-decadal experiments: $\ln(\text{population density})$ prediction of the 2020 label.}
+%   \label{tab:clay_temporal_cross_year}
+%   \footnotesize
+%   \renewcommand{\arraystretch}{1.15}
+%   \setlength{\tabcolsep}{4pt}
+  
+%   \begin{tabularx}{\textwidth}{@{} >{\raggedright\arraybackslash}X cccc r @{}}
+%     \toprule
+%     \textbf{Specification} & Ridge $R^2$ & Ridge MAE & XGB $R^2$ & XGB MAE & $n$ \\
+%     \midrule
+%     1. 2010 emb $\to$ 2020 (matched AGEBs, 5-fold OOF) & 0.5533 & 0.5741 & 0.6084 & 0.5277 & 52{,}086 \\
+%     \addlinespace[4pt]
+%     2. $[\mathrm{emb}_{2010},\,\Delta\mathrm{emb}] \to$ 2020 (matched AGEBs, 5-fold OOF) & \cellcolor{teal!15} 0.6121 & \cellcolor{teal!15} 0.5299 & \cellcolor{teal!15} 0.6389 & \cellcolor{teal!15} 0.5036 & 52{,}086 \\
+%     \addlinespace[4pt]
+%     3. Train all 2010 $\to$ predict 2020 (full 2020 grid; no OOF) & 0.3668 & 0.7255 & 0.4555 & 0.6617 & 106{,}564 \\
+%     \bottomrule
+%   \end{tabularx}
+%   \medskip
+%   \raggedright
+%   \textit{Notes:} Row 3 is not cross-validated on the 2020 fold structure used in rows 1--2, so $R^2$ and MAE metrics are not directly comparable beyond qualitative reading. \colorbox{teal!15}{Highlighted} cells indicate the specification with best performance (highest $R^2$ and lowest MAE).
+% \end{table}
+
 \begin{table}[H]
   \centering
   \caption{Clay cross-decadal experiments: $\ln(\text{population density})$ prediction of the 2020 label.}
@@ -905,13 +935,13 @@ Table~\ref{tab:clay_temporal_cross_year} isolates those protocols for ridge and 
   
   \begin{tabularx}{\textwidth}{@{} >{\raggedright\arraybackslash}X cccc r @{}}
     \toprule
-    \textbf{Specification} & Ridge $R^2$ & Ridge MAE & XGB $R^2$ & XGB MAE & $n$ \\
+    \textbf{Specification} & \textbf{Ridge $R^2$} & \textbf{Ridge MAE} & \textbf{XGB $R^2$} & \textbf{XGB MAE} & \textbf{$n$} \\
     \midrule
-    1. 2010 emb $\to$ 2020 (matched AGEBs, 5-fold OOF) & 0.5533 & 0.5741 & 0.6084 & 0.5277 & 52{,}086 \\
+    1. 2010 emb $\to$ 2020 (matched AGEBs, 5-fold OOF) & 0.5533 & 0.5741 & 0.6084 & 0.5277 & 52,086 \\
     \addlinespace[4pt]
-    2. $[\mathrm{emb}_{2010},\,\Delta\mathrm{emb}] \to$ 2020 (matched AGEBs, 5-fold OOF) & \cellcolor{teal!15} 0.6121 & \cellcolor{teal!15} 0.5299 & \cellcolor{teal!15} 0.6389 & \cellcolor{teal!15} 0.5036 & 52{,}086 \\
+    2. $[\mathrm{emb}_{2010},\,\Delta\mathrm{emb}] \to$ 2020 (matched AGEBs, 5-fold OOF) & \cellcolor{teal!15}{0.6121} & \cellcolor{teal!15}{0.5299} & \cellcolor{teal!15}{0.6389} & \cellcolor{teal!15}{0.5036} & 52,086 \\
     \addlinespace[4pt]
-    3. Train all 2010 $\to$ predict 2020 (full 2020 grid; no OOF) & 0.3668 & 0.7255 & 0.4555 & 0.6617 & 106{,}564 \\
+    3. Train all 2010 $\to$ predict 2020 (full 2020 grid; no OOF) & 0.3668 & 0.7255 & 0.4555 & 0.6617 & 106,564 \\
     \bottomrule
   \end{tabularx}
   \medskip
@@ -929,11 +959,11 @@ To assess whether the aggregate temporal correlations manifest as spatially cohe
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\textwidth]{figs/case_study_temporal_change.pdf}
-  \caption{Actual (top) versus predicted (bottom) decadal change $\Delta\ln(\text{pop.\ density})$ for the municipalities of Querétaro, Cancún, and Aguascalientes. Blue indicates population growth, red indicates decline. Color scale is shared within each city column using a diverging RdBu palette centered at zero.}
+  \caption{Actual (top) versus predicted (bottom) decadal change $\Delta\ln(\text{pop.\ density})$ for the municipalities of Querétaro, Cancún, and Aguascalientes. Blue indicates population growth, red indicates decline. Color scale is shared within each city column using a diverging red-to-blue palette centered at zero.}
   \label{fig:case_study_temporal}
 \end{figure}
 
-All three cities exhibit a common suburbanization signature---peripheral AGEBs colored in blue (growth) ringing an older core with near-zero or mildly negative change---and the predicted maps reproduce this spatial gradient with reasonable fidelity. In Cancún, the model correctly identifies rapid densification along the northern hotel-zone corridor and westward residential expansion, while the established downtown grid registers as near-zero change in both actual and predicted panels. Aguascalientes, a compact radial city, yields the highest municipality-level $r$: the model captures both the outer growth ring and scattered interior pockets of densification. Querétaro, despite a lower $r$ at the municipality level than at the state level ($0.567$ vs.\ $0.669$), still shows spatial agreement in the broad pattern---growth in the southern satellite towns and relative stagnation in the historic centro---though the prediction underestimates the magnitude of peripheral growth in several fast-developing AGEBs.
+All three cities exhibit a common suburbanization signature---peripheral AGEBs colored in blue (growth) ringing an older core with near-zero or mildly negative change---and the predicted maps reproduce this spatial gradient with reasonable fidelity. In Cancún, the model correctly identifies rapid densification along the northern hotel-zone corridor and westward residential expansion, while the established downtown grid registers as near-zero change in both actual and predicted panels. Aguascalientes, a compact radial city, yields the highest municipality-level $r$ likely because the model captures both the outer growth ring and scattered interior pockets of densification. Querétaro, despite a lower $r$ at the municipality level than at the state level ($0.567$ vs.\ $0.669$), still shows spatial agreement in the broad pattern---growth in the southern satellite towns and relative stagnation in the historic centro---though the prediction underestimates the magnitude of peripheral growth in several fast-developing AGEBs.
 
 These maps demonstrate that the temporal signal encoded in $\Delta\mathrm{emb}$ is not merely statistical noise driving aggregate correlations; it translates into spatially interpretable growth patterns that align with known urbanization dynamics in Mexican secondary cities.
 
@@ -956,13 +986,13 @@ All models achieve a moderate positive correlation, ranging from $0.443$ to $0.5
 
 \section{Conclusion}
 \subsection{Discussion of Results}
-The findings of this thesis suggest that geospatial foundation models can do a decent job at bridging the gap between decennial censuses and the immediate needs of policymakers. While a traditional national count, requires the mobilization of hundreds of thousands of workers (Mexico's 2020 Censo de Población y Vivienda had $151,000$ interviewers \parencite{inegi2020censo}) and a budget of billions of dollars (the 2020 US Census cost $13.7$ billion and reports indicate the cost of the census has doubled in the past decade \parencite{gao2023census, farmer2018census}), the models explored in this thesis can produce high-resolution population estimates using only a few hours of compute resources. Empirically, these models explain between $63\%$ and $73\%$ of the variation in log population density at the polygon level. Perhaps more significantly for regional planning, predictive accuracy scales with geographic aggregation, achieving an $R^2$ of up to $0.88$ at the municipality level. This demonstrates that while point-level noise persists in satellite-derived embeddings, the models capture the broad population dynamics of a region with impressive fidelity.
+The findings of this thesis suggest that geospatial foundation models can do a decent job at bridging the gap between decennial censuses and the immediate needs of policymakers. While a traditional national count, requires the mobilization of hundreds of thousands of workers (Mexico's 2020 Censo de Población y Vivienda had $151,000$ interviewers \parencite{inegi2020censo}) and a budget of billions of dollars (the 2020 US Census cost $13.7$ billion and reports indicate the cost of the census has doubled in the past decade \parencite{gao2023census, farmer2018census}), the models explored in this thesis can produce high-resolution population estimates using only a few hours of compute resources. Empirically, these models explain between $61\%$ and $73\%$ of the variation in log population density at the polygon level. Perhaps more significantly for regional planning, predictive accuracy scales with geographic aggregation, achieving an $R^2$ of up to $0.88$ at the municipality level (AlphaEarth, 2020, XGBoost). This demonstrates that while point-level noise persists in satellite-derived embeddings, the models capture the broad population dynamics of a region with impressive fidelity.
 
-Comparing these results to the existing literature, my findings demonstrate that geospatial foundation models significantly push the boundary of what is possible in intercensal population estimation. At the polygon level, the AlphaEarth-XGBoost $R^2$ of $0.727$ exceeds the $R^2 = 0.71$ achieved by task-specific urban CNNs at a similar 30m resolution in Nanjing \parencite{SONG2019103580}---a notable result given that my dataset spans the full geographic and morphological diversity of Mexico rather than a single metropolitan area. It also exceeds the $R^2$ of 0.63--0.64 that \textcite{metz2025application} found for Malawi population density prediction. Furthermore, my municipality-level $R^2$ of $0.879$ is very close to the $R^2 = 0.91$ benchmark cited for national-scale models operating at much coarser 250m resolutions \parencite{rs11222620}. 
+Comparing these results to the existing literature, my findings demonstrate that geospatial foundation models significantly push the boundary of what is possible in intercensal population estimation. At the polygon level, the AlphaEarth 2020 XGBoost $R^2$ of $0.727$ exceeds the $R^2 = 0.71$ achieved by task-specific urban CNNs at a similar 30\,m resolution in Nanjing \parencite{SONG2019103580}---a notable result given that my dataset spans the full geographic and morphological diversity of Mexico rather than a single metropolitan area. It also exceeds the $R^2$ of 0.63--0.64 that \textcite{metz2025application} found for Malawi population density prediction. Furthermore, my municipality-level $R^2$ of $0.879$ is very close to the $R^2 = 0.91$ benchmark cited for national-scale models operating at much coarser 250\,m resolutions \parencite{rs11222620}. 
 
 
 \paragraph{Scale Effects on Model Performance.}
-Statistical analysis of state-level performance reveals that median polygon area is the strongest predictor of model accuracy ($r=0.56$). This suggests that the vision transformer architecture benefits significantly from a richer window of pixels---larger polygons, like those typical of Northern Mexican states, provide the model with more spatial context to resolve complex land-use patterns. Conversely, highly dense and structurally homogenous areas like Mexico City lack the within-state variance to enable embeddings to learn the subtle signals in density differences. The key takeaway is that model utility is highest when applied to units of analysis that align with the spatial support of the underlying remote sensing data.
+Statistical analysis of state-level performance reveals that median polygon area is the strongest predictor of model accuracy ($r=0.56$). This suggests that the vision transformer architecture benefits significantly from a richer window of pixels. Larger polygons, like those typical of Northern Mexican states, provide the model with more spatial context to resolve complex land-use patterns. Conversely, highly dense and structurally homogenous areas like Mexico City lack the within-state variance to enable embeddings to learn the subtle signals in density differences. The key takeaway is that model utility is highest when applied to units of analysis that align with the spatial support of the underlying remote sensing data.
 
 \paragraph{Environmental Bias.}
 For the Clay models, I found non-trivial amounts of systematic over/under-prediction that varied with the country's environmental features. There was persistent over-prediction in northern industrial states and a systematic under-prediction in southern, wetland-heavy regions such as Tabasco. This regional tilt suggests that the Clay embeddings may conflate specific land-cover signatures (e.g., arid terrain or industrial clusters) with higher population densities than are actually present. In the South, where dense vegetation and wetlands may mask informal settlements or specific roofing materials, the models tend to underestimate residents. Policymakers should note that these models, while computationally efficient, risk under-representing vulnerable populations in specific environmental contexts unless calibrated for local biomes.
@@ -977,6 +1007,9 @@ Echoing back to our initial research questions from Section \ref{sub:researchque
 \subsection{Limitations}
 \label{sub:limitation}
 \paragraph{Absence of 2010 locality-level shapefiles.}
+
+There are a few factors, ranging from data limitations to technical data processing specifications, that are limiting the potential of this project.
+
 The 2010 INEGI census data did not include locality-level shapefiles comparable to those available for 2020, restricting the 2010 analysis to urban AGEBs exclusively. This introduced two compounding constraints: (1) the urban-only sample is definitionally homogeneous in settlement type, and (2) the reduced number of observations limited the model's training data. It also complicated direct comparison between 2010 and 2020 results, as performance differences cannot be cleanly attributed to model behavior versus differences in geographic scope and sample composition.
 
 \paragraph{Zero-population filtering.}
@@ -987,7 +1020,9 @@ The 2020 Mexican Census was selected as the primary ground truth on the basis of
 
 
 \subsection{Future Work}
- 
+
+The field of geospatial foundation models for predicting socioeconomic labels is still nascent. There are many areas to extend and build upon the findings of this thesis.
+
 \paragraph{Two-Stage modeling for inhabited land classification.} As discussed in Section \ref{sub:limitation}, one flaw with the model is that it does not distinguish between genuinely uninhabited land and sparely populated areas. Future work could extend my project with a two-stage model to first classify populated vs. unpopulated land, and then second perform the regression to predict exact population densities. 
 
 

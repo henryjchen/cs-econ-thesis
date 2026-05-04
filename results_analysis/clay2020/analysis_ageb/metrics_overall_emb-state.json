@@ -1,0 +1,26 @@
+{
+  "feature_set": "emb+state",
+  "cv": "random 5-fold (seed=0)",
+  "target": "log_popden",
+  "min_target": 1e-09,
+  "max_target": null,
+  "n_rows": 106564,
+  "n_states": 32,
+  "unit_name": "AGEBs",
+  "source_parquet": "embedding_extract/out_2020/ageb_features.parquet",
+  "tag": "emb-state",
+  "metrics": {
+    "ridge": {
+      "r2": 0.5131722092628479,
+      "mae": 0.6391775012016296,
+      "rmse": 0.9221841096878052,
+      "n": 106564
+    },
+    "xgboost": {
+      "r2": 0.6091110706329346,
+      "mae": 0.560766339302063,
+      "rmse": 0.8263359069824219,
+      "n": 106564
+    }
+  }
+}

@@ -131,6 +131,11 @@ Fits the final models (Ridge + XGBoost) across all spatial scales and generates 
 *   **Slurm:** `sbatch cluster_scripts/run_all_analyses_year.sh --year 2020`
 *   **Python:** `./embedding_extract/run_all_analyses.sh --year 2020`
 
+### Stage 7: Cross-Temporal Analysis
+Evaluates model transferability and decadal change by linking 2010 and 2020 data.
+*   **Slurm:** `sbatch cluster_scripts/cross_temporal_analysis.sh --drop-zero-target`
+*   **Python:** `python -m embedding_extract.evaluation.cross_temporal --drop-zero-target`
+
 ---
 
 ## 4. Results Analysis & Comparison

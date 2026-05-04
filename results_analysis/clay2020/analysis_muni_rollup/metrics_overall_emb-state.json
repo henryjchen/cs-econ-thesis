@@ -1,0 +1,26 @@
+{
+  "feature_set": "emb+state",
+  "cv": "random 5-fold (seed=0)",
+  "target": "log_popden",
+  "min_target": 1e-09,
+  "max_target": null,
+  "n_rows": 2469,
+  "n_states": 32,
+  "unit_name": "municipios",
+  "source_parquet": "embedding_extract/out_2020/municipio_features.parquet",
+  "tag": "emb-state",
+  "metrics": {
+    "ridge": {
+      "r2": 0.6439897418022156,
+      "mae": 0.33480527997016907,
+      "rmse": 0.45101189613342285,
+      "n": 2469
+    },
+    "xgboost": {
+      "r2": 0.7492697238922119,
+      "mae": 0.28521791100502014,
+      "rmse": 0.3784949779510498,
+      "n": 2469
+    }
+  }
+}
