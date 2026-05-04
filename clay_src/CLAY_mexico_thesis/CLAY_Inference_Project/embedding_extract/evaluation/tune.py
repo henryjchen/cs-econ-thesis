@@ -238,11 +238,11 @@ def main() -> int:
         min_target=args.min_target,
         max_target=args.max_target,
     )
-    feature_set = "emb"
+    feature_set = "emb+state"
     X, emb_dim = fanalysis._build_features(
         X_emb,
         state,
-        add_state_dummies=False,
+        add_state_dummies=True,
         state_only=False,
     )
 
@@ -320,11 +320,11 @@ if __name__ == "__main__":
         min_target=args.min_target,
         max_target=args.max_target,
     )
-    feature_set = "emb"
+    feature_set = "emb+state"
     X, emb_dim = fanalysis._build_features(
         X_emb,
         state,
-        add_state_dummies=False,
+        add_state_dummies=True,
         state_only=False,
     )
 

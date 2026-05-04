@@ -474,11 +474,17 @@ def main() -> int:
     )
     parser.add_argument(
         "--state-dummies",
-        action="store_true",
+        action="store_false",
+        dest="state_dummies",
+        default=True,
         help="Append one-hot state indicators (from CVEGEO first 2 chars) to the "
-             "feature matrix. With --leave-one-state-out the held-out state's dummy "
-             "column will be all-zero in training, so it contributes nothing in that "
-             "mode and you should typically leave this flag off there.",
+             "feature matrix. Default: True. Use --no-state-dummies to disable.",
+    )
+    parser.add_argument(
+        "--no-state-dummies",
+        action="store_false",
+        dest="state_dummies",
+        help="Disable one-hot state indicators.",
     )
     parser.add_argument(
         "--state-only",
