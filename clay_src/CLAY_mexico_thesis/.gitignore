@@ -60,12 +60,6 @@ CLAY_Inference_Project/logs/
 CLAY_Inference_Project/out/
 CLAY_Inference_Project/out_2020/
 
-# --- GIS & Data Files ---
-*.sbn
-*.sbx
-*.qmd
-*.qgz
-
 # --- Project Specific Data Paths ---
 mexico-key.json
 .codex
