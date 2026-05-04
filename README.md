@@ -1,7 +1,9 @@
 # Mexico Census Population Density Prediction
 
 Author: Henry Chen
+
 Advisor: Luke Sanford (Yale School of the Environment)
+
 Contact: henry.chen@yale.edu
 
 This project explores socioeconomic estimation (specifically population density) in Mexico using satellite imagery and foundation models. It compares two approaches: **AlphaEarth** (static embeddings) and **CLAY** (dynamic foundation model) for the years 2010 and 2020.
