@@ -1,8 +1,8 @@
-PWD /Users/henrychen/Desktop/CS-Econ Thesis/deliverables/report
+PWD /Users/henrychen/Documents/Classes/CS_Econ_thesis/deliverables/report
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/henrychen/Desktop/CS-Econ Thesis/deliverables/report/report.tex
+INPUT /Users/henrychen/Documents/Classes/CS_Econ_thesis/deliverables/report/report.tex
 OUTPUT report.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls

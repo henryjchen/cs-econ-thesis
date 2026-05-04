@@ -1,5 +1,9 @@
 # Mexico Census Population Density Prediction
 
+Author: Henry Chen
+Advisor: Luke Sanford (Yale School of the Environment)
+Contact: henry.chen@yale.edu
+
 This project explores socioeconomic estimation (specifically population density) in Mexico using satellite imagery and foundation models. It compares two approaches: **AlphaEarth** (static embeddings) and **CLAY** (dynamic foundation model) for the years 2010 and 2020.
 
 ## Project Structure
@@ -29,7 +33,9 @@ This project explores socioeconomic estimation (specifically population density)
 
 ---
 
-## 1. Preliminary Setup
+## 1. Preliminary 
+
+Please note that access to an HPC is highly recommended for these steps as well as the CLAY steps. I used Yale's [Bouchet cluster](https://docs.ycrc.yale.edu/clusters/bouchet/).
 
 ### Data Preparation
 1.  **Download Census Data:** Download the INEGI CSV files and the corresponding shapefiles for the relevant census years (2010, 2020).
@@ -56,7 +62,7 @@ A dedicated virtual environment (`claymodel`) is required for the CLAY pipeline.
 2.  **Dependencies:** 
     *   Install the Earth Engine API: `pip install earthengine-api`
     *   **Note:** If the provided `environment.yml` fails, manually install the core packages: `pip install torch torchvision torchaudio geopandas shapely pyarrow pandas numpy scikit-learn xgboost matplotlib tqdm`.
-3.  **Model Weights:** Download `clay-v1-base.ckpt` from [Hugging Face](https://huggingface.co/made-with-clay/Clay/tree/main) and place it in `clay_src/CLAY_mexico_thesis/CLAY_Inference_Project/Clay/weights/`.
+3.  **Model Weights:** Download `clay-v1-base.ckpt` from [Hugging Face](https://huggingface.co/made-with-clay/Clay/tree/main) and place it somewhere accessible on your local or HPC system (you will need to reference it later)
 
 ---
 
@@ -122,7 +128,7 @@ Finds the optimal Ridge alpha and XGBoost parameters for the generated embedding
 
 ### Stage 6: Final ML Analysis
 Fits the final models (Ridge + XGBoost) across all spatial scales and generates evaluation figures.
-*   **Slurm:** `sbatch cluster_scripts/analyze_ageb_features.sh --year 2020`
+*   **Slurm:** `sbatch cluster_scripts/run_all_analyses_year.sh --year 2020`
 *   **Python:** `./embedding_extract/run_all_analyses.sh --year 2020`
 
 ---
