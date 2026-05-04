@@ -61,22 +61,12 @@ CLAY_Inference_Project/out/
 CLAY_Inference_Project/out_2020/
 
 # --- GIS & Data Files ---
-*.tif
-*.tiff
-*.cpg
-*.dbf
-*.prj
-*.shp
-*.shx
 *.sbn
 *.sbx
 *.qmd
 *.qgz
-*.zip
 
 # --- Project Specific Data Paths ---
-CLAY_Inference_Project/embedding_extract/data/data_prep/processed_data/
-CLAY_Inference_Project/embedding_extract/data/data_prep/raw_data/
 mexico-key.json
 .codex
 GEMINI.md
