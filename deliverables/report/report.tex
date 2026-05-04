@@ -479,7 +479,7 @@ Table~\ref{tab:alphaearth_clay_summary} below summarizes several practical contr
 \subsubsection{Data Pipelines for Embedding Extraction}
 
 \paragraph{AlphaEarth.}
-Since I wrote code to interface with the Google Earth Engine, I could simply load in the AlphaEarth embeddings just by specifying the \texttt{GOOGLE/SATELLITE\_EMBEDDING/\allowbreak V1/ANNUAL} image collection for the relevant year and geometries to retrieve data for.
+Since I wrote code to interface with the Google Earth Engine, I could simply load in the AlphaEarth embeddings just by specifying the \texttt{GOOGLE/SATELLITE\_EMBEDDING/\allowbreak V1/ANNUAL} Image Collection for the relevant year and geometries to retrieve data for.
 
 \paragraph{Clay.}
 The Clay model, on the other hand, worked locally on my machine and I could not rely on the ease of Google Earth Engine to retrieve the embeddings. Instead, I had to download the cloud-masked composite images for the relevant year and feed them into the Clay model. To create these composites, I processed Landsat-7 (Collection 2, Level 2) imagery for Mexico through a pipeline of radiometric calibration, bitwise quality masking, and temporal aggregation:\footnote{The specific code for this can be found in my project's GitHub repository, which is linked in Section \ref{subsub:computational}.}
@@ -496,7 +496,7 @@ Despite Landsat-8 being launched into orbit in 2013 and thus available to be use
 
 \subsection{Analysis/Prediction Pipeline}
 
-After constructing polygon-level foundation model embeddings, I trained two supervised prediction heads that map embeddings (and a set of geographic covariates) to the target, $\ln(\text{population density})$. The first head is \emph{ridge regression} (linear least squares with an $\ell_2$ penalty). The second is \emph{XGBoost}, a gradient-boosted ensemble of regression trees. I use both because they offer a transparent linear baseline and a flexible nonlinear alternative while remaining computationally tractable on a hundred thousand polygons.
+After constructing polygon-level foundation model embeddings, I trained two supervised prediction heads that map embeddings (and a set of geographic covariates) to the target, $\ln(\text{population density})$. The first head is \emph{Ridge regression} (linear least squares with an $\ell_2$ penalty). The second is \emph{XGBoost}, a gradient-boosted ensemble of regression trees. I use both because they offer a transparent linear baseline and a flexible nonlinear alternative while remaining computationally tractable on a hundred thousand polygons.
 
 \subsubsection{Features and Target Variable}
 For each polygon $p$, let $y_p$ denote population density (persons per unit area, consistent with the merged census fields) and let $A_p \in \mathbb{R}^{d}$ denote the embedding vector produced by the chosen foundation model after any required aggregation to the polygon. For the AlphaEarth experiments, $d=64$; Clay produces higher-dimensional patch-level representations $d=768$.

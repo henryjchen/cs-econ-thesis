@@ -72,8 +72,8 @@ A dedicated virtual environment (`claymodel`) is required for the CLAY pipeline.
 
 Execute all commands from the `alphaearth_src/` directory.
 
-1.  **GEE Extraction (Optional):** Run `google_earth_engine_scripts/alphaearth_embedding_extract.js` in the GEE Code Editor. Save the resulting CSV shards to `alphaearth_src/data/embeddings/`.
-2.  **Concatenate Embeddings:**
+1.  **GEE Extraction (Optional, I already uploaded the output to GitHub):** Run `google_earth_engine_scripts/alphaearth_embedding_extract.js` in the GEE Code Editor. Save the resulting CSV shards to `alphaearth_src/data/embeddings/`.
+2.  **Concatenate Embeddings (Optional, I already uploaded the output to GitHub):**
     ```bash
     python scripts/data_prep/concat_embeddings.py
     ```
