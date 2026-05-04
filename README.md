@@ -21,7 +21,9 @@ This project explores socioeconomic estimation (specifically population density)
 │           ├── Clay/           # Clay foundation model source & configuration
 │           ├── embedding_extract/ # Main pipeline (GEE -> CLAY -> Aggregation)
 │           ├── cluster_scripts/ # Slurm/HPC helper scripts
-│           └── data/           # Input shapefiles (AGEBs/Municipios)
+│           ├── data/           # Input shapefiles (AGEBs/Municipios)
+│           ├── out/            # (Created at runtime) CLAY 2010 outputs
+│           └── out_2020/       # (Created at runtime) CLAY 2020 outputs
 ├── results_analysis/           # Final cross-model comparison
 │   ├── clay2010/               # Artifacts collected from CLAY 2010 run
 │   ├── clay2020/               # Artifacts collected from CLAY 2020 run
