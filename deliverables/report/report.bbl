@@ -1,0 +1,1401 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{BlackSkyGen3}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=482809c66f02319e5e369d8037cbba87}{%
+           family={{BlackSky}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{482809c66f02319e5e369d8037cbba87}
+      \strng{fullhash}{482809c66f02319e5e369d8037cbba87}
+      \strng{bibnamehash}{482809c66f02319e5e369d8037cbba87}
+      \strng{authorbibnamehash}{482809c66f02319e5e369d8037cbba87}
+      \strng{authornamehash}{482809c66f02319e5e369d8037cbba87}
+      \strng{authorfullhash}{482809c66f02319e5e369d8037cbba87}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.blacksky.com/gen-3/}}
+      \field{note}{Accessed: April 21, 2026}
+      \field{title}{Gen-3: Superior Intelligence Faster Than Ever Before}
+      \field{year}{2026}
+    \endentry
+    \entry{Brownetal2025}{article}{}
+      \name{author}{19}{}{%
+        {{un=0,uniquepart=base,hash=acb7db9eafcc176ec96f01757ce85aa9}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Christopher\bibnamedelima F.},
+           giveni={C\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fbc62cb379f3bfac7c7e9f9648937081}{%
+           family={Kazmierski},
+           familyi={K\bibinitperiod},
+           given={Michal\bibnamedelima R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b30977a7d1781aa2e03d507e983fdcf8}{%
+           family={Pasquarella},
+           familyi={P\bibinitperiod},
+           given={Valerie\bibnamedelima J.},
+           giveni={V\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=408a97ab46775869b71f0e722577ddc9}{%
+           family={Rucklidge},
+           familyi={R\bibinitperiod},
+           given={William\bibnamedelima J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db9d5d1acb039a1978c8928bfcc0e66a}{%
+           family={Samsikova},
+           familyi={S\bibinitperiod},
+           given={Masha},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3e7af32bed41a2494221263166fbe46}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Chenhui},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ce499f8943cac7cba0a73388d289a2e}{%
+           family={Shelhamer},
+           familyi={S\bibinitperiod},
+           given={Evan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=77599571464311244efa10e6f1469309}{%
+           family={Lahera},
+           familyi={L\bibinitperiod},
+           given={Estefania},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae47e9ef8cec05d24a2c86d7821ff291}{%
+           family={Wiles},
+           familyi={W\bibinitperiod},
+           given={Olivia},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c4ad5f57526bc5e2860286041301be5}{%
+           family={Ilyushchenko},
+           familyi={I\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ecdf9b747a50a0392d63cfcb19bab980}{%
+           family={Gorelick},
+           familyi={G\bibinitperiod},
+           given={Noel},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=60457ead86ce78ddcb37c450c236fee9}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Lihui\bibnamedelima Lydia},
+           giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=013f87467ad0eff7375fbafe8d7c1903}{%
+           family={Alj},
+           familyi={A\bibinitperiod},
+           given={Sophia},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=97e746aedc4dc0dc4a91eaa6e21f2f6c}{%
+           family={Schechter},
+           familyi={S\bibinitperiod},
+           given={Emily},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e9cafe40ce85ab0a30724f1e6a2c1923}{%
+           family={Askay},
+           familyi={A\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9016c8fc7f005701d7a2df9189695525}{%
+           family={Guinan},
+           familyi={G\bibinitperiod},
+           given={Oliver},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=438ba6e4e04af2429f76e57a1dfe5974}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Rebecca},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a17745d853f84ee3c6eacebf25b89da9}{%
+           family={Boukouvalas},
+           familyi={B\bibinitperiod},
+           given={Alexis},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d0d21ff02dda6c0a7d09ef7436bd329b}{%
+           family={Kohli},
+           familyi={K\bibinitperiod},
+           given={Pushmeet},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fdf03014bf6174d6c023539c9ef702f8}
+      \strng{fullhash}{90a1c41e529b847a95e637f191d23c76}
+      \strng{bibnamehash}{90a1c41e529b847a95e637f191d23c76}
+      \strng{authorbibnamehash}{90a1c41e529b847a95e637f191d23c76}
+      \strng{authornamehash}{fdf03014bf6174d6c023539c9ef702f8}
+      \strng{authorfullhash}{90a1c41e529b847a95e637f191d23c76}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2507.22291}
+      \field{title}{AlphaEarth Foundations: An embedding field model for accurate and efficient global mapping from sparse label data}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.48550/arXiv.2507.22291
+      \endverb
+    \endentry
+    \entry{Burns2026}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ecab837e50f92cbb763d67dc47f5329f}{%
+           family={Burns},
+           familyi={B\bibinitperiod},
+           given={Mina},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ecab837e50f92cbb763d67dc47f5329f}
+      \strng{fullhash}{ecab837e50f92cbb763d67dc47f5329f}
+      \strng{bibnamehash}{ecab837e50f92cbb763d67dc47f5329f}
+      \strng{authorbibnamehash}{ecab837e50f92cbb763d67dc47f5329f}
+      \strng{authornamehash}{ecab837e50f92cbb763d67dc47f5329f}
+      \strng{authorfullhash}{ecab837e50f92cbb763d67dc47f5329f}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Google Earth and Earth Engine (Medium)}
+      \field{month}{4}
+      \field{title}{Rethinking Change Detection and Attribution: How You Compare Satellite Embeddings Matters}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://medium.com/google-earth/rethinking-change-detection-and-attribution-how-you-compare-satellite-embeddings-matters-858f17f577d7
+      \endverb
+      \verb{url}
+      \verb https://medium.com/google-earth/rethinking-change-detection-and-attribution-how-you-compare-satellite-embeddings-matters-858f17f577d7
+      \endverb
+    \endentry
+    \entry{cai_annual_2026}{article}{}
+      \name{author}{13}{}{%
+        {{un=0,uniquepart=base,hash=ecbcdbba49a05b06ec64b4a18636a2b1}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Yaotong},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eacffe2a6d9d0c665fcf35dddb06c3b8}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Baoni},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=488df5bacbc71f003e4333c460abe492}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Xiaoye},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=45b153f1200605d12615ab51e6c1badf}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea63774ea03439886a923b6307d23223}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Yakun},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9e27b3bb448be9c7f244a865596dc8ee}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Shuxin},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d368365ddcebb2ec581a0b92e240d32}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Yingzuo},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=19b957c54864959ffddb65c6dbf1489e}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Shudi},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4cd4aa7360f3bf37aee18828f5df8142}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Jianhuai},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a9acfbcf86d2b66b80c4badc9cbb7d2e}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Huizhong},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9f308cd8e02707f95ae8b41257daa918}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Zhilin},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e604b8fe00b9ef358fcfa4804565955b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Xiaoping},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=11d3386ab3f33f64d768f4d4208d8856}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Zhenzhong},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Copernicus {GmbH}}%
+      }
+      \strng{namehash}{934ce99b31a1b051a30951247c6cbecc}
+      \strng{fullhash}{3d07d7f8ab7bf805fbe5b88eb715e5a3}
+      \strng{bibnamehash}{3d07d7f8ab7bf805fbe5b88eb715e5a3}
+      \strng{authorbibnamehash}{3d07d7f8ab7bf805fbe5b88eb715e5a3}
+      \strng{authornamehash}{934ce99b31a1b051a30951247c6cbecc}
+      \strng{authorfullhash}{3d07d7f8ab7bf805fbe5b88eb715e5a3}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{<}p{>}{<}strong class="journal-{contentHeaderColor}"{>}Abstract.{<}/strong{>} Southeast Asia ({SEA}) contributes substantially to tropical agriculture, but remains underserved by high-precision cropland data due to persistent cloud cover, fragmented farming, prevalent shifting cultivation, and complex phenology. Here, we developed a 10-m annual cropland dataset for {SEA} ({SEA}\_Cropland10) covering 2019\&ndash;2024 using a random forest model on Google Earth Engine. The model integrated 88,088 Sentinel-1 {SAR} scenes, 599,255 Sentinel-2 optical images, and Google {AlphaEarth} embeddings, and was trained using 37,192 visually interpreted samples. An independent accuracy assessment was performed using 1,200 samples stratified by land-cover change trajectories to validate both temporal dynamics and spatial extent. {SEA}\_Cropland10 achieved an overall accuracy ({OA}) of 92.67 \% (\&plusmn;1.47 \%) for cropland dynamics, with annual static accuracies consistently exceeding 92.42 \% (\&plusmn;1.50 \%). The incorporation of {AlphaEarth} embeddings proved critical, improving model performance by 5.81 \%. Compared to existing global products (e.g., {GLAD}, {WorldCereal}), {SEA}\_Cropland10 improved {OA} by 14.56 \%\&ndash;19.97 \% and substantially enhanced the detection of sloping cropland (\&gt;5\&deg;) in mountainous regions of {SEA}, increasing producer\&rsquo;s accuracy in global baselines from below 29.7 \%\&ndash;32.9 \% to 89.0 \%\&ndash;99.1 \%. Consequently, we identified three- to fourfold more sloping cropland area than {GLAD} and {WorldCereal} reported. Based on {SEA}\_Cropland10, the estimated total cropland area in {SEA} shifted from 68.7 (\&plusmn;2.8) Mha in 2019 to 67.3 (\&plusmn;3.2) Mha in 2024, showing strong consistency with national statistics ({<}em{>}r{<}/em{>} = 0.90\&ndash;0.95). This dataset provides an important improvement for regional food security monitoring and carbon cycle modeling. The {SEA}-Cropland10 is publicly available at Zenodo: {<}a href="https://doi.org/10.5281/zenodo.17828801"{>}https://doi.org/10.5281/zenodo.17828801{<}/a{>} (Cai and Zeng, 2026) and Google Earth Engine App: {<}a href="https://ee-caiyt33tc.projects.earthengine.app/view/seacrop10"{>}https://ee-caiyt33tc.projects.earthengine.app/view/seacrop10{<}/a{>}.{<}/p{>}}
+      \field{day}{25}
+      \field{journaltitle}{Earth System Science Data Discussions}
+      \field{month}{2}
+      \field{title}{Annual 10-m high-resolution cropland maps for Southeast Asia since 2019 using {AlphaEarth} embeddings}
+      \field{urlday}{11}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 30}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.5194/essd-2026-78
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/henrychen/Zotero/storage/2ZPVNB4U/Cai et al. - 2026 - Annual 10-m high-resolution cropland maps for Southeast Asia since 2019 using AlphaEarth embeddings.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://essd.copernicus.org/preprints/essd-2026-78/
+      \endverb
+      \verb{url}
+      \verb https://essd.copernicus.org/preprints/essd-2026-78/
+      \endverb
+    \endentry
+    \entry{clayfoundation2026}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=094087be20786cb6c4e0232429b8f7dd}{%
+           family={{Clay Foundation}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{094087be20786cb6c4e0232429b8f7dd}
+      \strng{fullhash}{094087be20786cb6c4e0232429b8f7dd}
+      \strng{bibnamehash}{094087be20786cb6c4e0232429b8f7dd}
+      \strng{authorbibnamehash}{094087be20786cb6c4e0232429b8f7dd}
+      \strng{authornamehash}{094087be20786cb6c4e0232429b8f7dd}
+      \strng{authorfullhash}{094087be20786cb6c4e0232429b8f7dd}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Clay Foundation Model: An open source {AI} model for Earth}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://clay-foundation.github.io/model/
+      \endverb
+      \verb{url}
+      \verb https://clay-foundation.github.io/model/
+      \endverb
+    \endentry
+    \entry{farmer2018census}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6179764336648f5d1209c41a4e37d8f4}{%
+           family={Farmer},
+           familyi={F\bibinitperiod},
+           given={Alexis},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6179764336648f5d1209c41a4e37d8f4}
+      \strng{fullhash}{6179764336648f5d1209c41a4e37d8f4}
+      \strng{bibnamehash}{6179764336648f5d1209c41a4e37d8f4}
+      \strng{authorbibnamehash}{6179764336648f5d1209c41a4e37d8f4}
+      \strng{authornamehash}{6179764336648f5d1209c41a4e37d8f4}
+      \strng{authorfullhash}{6179764336648f5d1209c41a4e37d8f4}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Brennan Center for Justice}
+      \field{month}{3}
+      \field{title}{Funding the Census}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.brennancenter.org/our-work/research-reports/funding-census
+      \endverb
+      \verb{url}
+      \verb https://www.brennancenter.org/our-work/research-reports/funding-census
+      \endverb
+    \endentry
+    \entry{inegi2020censo}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b8a89b1b8e08c6ea170112ab1034835e}{%
+           family={{Instituto Nacional de Estadística y Geografía (INEGI)}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{b8a89b1b8e08c6ea170112ab1034835e}
+      \strng{fullhash}{b8a89b1b8e08c6ea170112ab1034835e}
+      \strng{bibnamehash}{b8a89b1b8e08c6ea170112ab1034835e}
+      \strng{authorbibnamehash}{b8a89b1b8e08c6ea170112ab1034835e}
+      \strng{authornamehash}{b8a89b1b8e08c6ea170112ab1034835e}
+      \strng{authorfullhash}{b8a89b1b8e08c6ea170112ab1034835e}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.inegi.org.mx/programas/ccpv/2020/}}
+      \field{title}{Censo de Población y Vivienda 2020}
+      \field{year}{2021}
+    \endentry
+    \entry{Jerven2013}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7723fdd47bea1851e095cf02b8262142}{%
+           family={Jerven},
+           familyi={J\bibinitperiod},
+           given={Morten},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Ithaca, NY}%
+      }
+      \list{publisher}{1}{%
+        {Cornell University Press}%
+      }
+      \strng{namehash}{7723fdd47bea1851e095cf02b8262142}
+      \strng{fullhash}{7723fdd47bea1851e095cf02b8262142}
+      \strng{bibnamehash}{7723fdd47bea1851e095cf02b8262142}
+      \strng{authorbibnamehash}{7723fdd47bea1851e095cf02b8262142}
+      \strng{authornamehash}{7723fdd47bea1851e095cf02b8262142}
+      \strng{authorfullhash}{7723fdd47bea1851e095cf02b8262142}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-8014-7860-4}
+      \field{series}{Cornell Studies in Political Economy}
+      \field{title}{Poor Numbers: How We Are Misled by African Development Statistics and What to Do about It}
+      \field{year}{2013}
+      \verb{doi}
+      \verb 10.7591/9780801467615
+      \endverb
+    \endentry
+    \entry{khachiyan2021using}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=628eef0d657cdef9f03914014e045813}{%
+           family={Khachiyan},
+           familyi={K\bibinitperiod},
+           given={Arman},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2b3f1f9ad091919698aa356cc157e37e}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0f9f881a7d219ec3c6dfcac54d84cc4}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Huye},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bdb914c33d79924aa43db93246da623b}{%
+           family={Hanson},
+           familyi={H\bibinitperiod},
+           given={Gordon},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c18645558bb0d0c3bd883d38c783c107}{%
+           family={Cloninger},
+           familyi={C\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bd72d6122ebc7b64615f5fc590efc659}{%
+           family={Rosing},
+           familyi={R\bibinitperiod},
+           given={Tajana},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0dc2bc75ccb2701ec261f3b53a2d1df5}{%
+           family={Khandelwal},
+           familyi={K\bibinitperiod},
+           given={Amit},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0054f642e0f3daf3b5f297f1c84c74a9}
+      \strng{fullhash}{a6e74fa2bc383a5a04ee12a0e2e75741}
+      \strng{bibnamehash}{a6e74fa2bc383a5a04ee12a0e2e75741}
+      \strng{authorbibnamehash}{a6e74fa2bc383a5a04ee12a0e2e75741}
+      \strng{authornamehash}{0054f642e0f3daf3b5f297f1c84c74a9}
+      \strng{authorfullhash}{a6e74fa2bc383a5a04ee12a0e2e75741}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Economic Review: Insights}
+      \field{month}{6}
+      \field{note}{Working Paper version dated June 29, 2021}
+      \field{title}{Using Neural Networks to Predict Micro-Spatial Economic Growth}
+      \field{year}{2021}
+    \endentry
+    \entry{rs11222620}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=97292aa43209d76ead922d8ea69610cc}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Peng},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=16d30b99f8b3126b40bde79b856b2efa}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xianfeng},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fee1b9b1a125797e7462d36f14a08e49}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Junyi},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ea829bd6f1bdccc2e57ec20ab6d8ab4}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Quan},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cbe4ed266c31f926f966a5ad77b3d265}
+      \strng{fullhash}{dc222d5640667eb04e0bea83fd4631d3}
+      \strng{bibnamehash}{dc222d5640667eb04e0bea83fd4631d3}
+      \strng{authorbibnamehash}{dc222d5640667eb04e0bea83fd4631d3}
+      \strng{authornamehash}{cbe4ed266c31f926f966a5ad77b3d265}
+      \strng{authorfullhash}{dc222d5640667eb04e0bea83fd4631d3}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The detailed information about the spatial distribution of the population is crucial for analyzing economic growth, environmental change, and natural disaster damage. Using the nighttime light (NTL) imagery for population estimation has been a topic of interest in recent decades. However, the effectiveness of NTL data in population estimation has been impeded by some limitations such as the blooming effect and underestimation in rural regions. To overcome these limitations, we combine the NPP-VIIRS day/night band (DNB) data with normalized difference vegetation index (NDVI) and land surface temperature (LST) data derived from the moderate resolution imaging spectroradiometer (MODIS) onboard the Terra satellite, to create a new vegetation temperature light population index (VTLPI). A statistical model is developed to predict 250m grid-level population density based on the proposed VTLPI and the least square regression approach. After that, a case study is implemented using the data of Sichuan Province, China in 2015, and the results indicates that the VTLPI-estimated population density outperformed the results from other two methods based on nighttime light imagery or human settlement index, and the three publicized population products, LandScan, WorldPop, and GPW. When using the census data as reference, the mean relative error and median absolute relative error on a township level are 0.29 and 0.12, respectively, and the root-mean-square error is 212 persons/km2. The results show that our VTLPI-based model can achieve a better estimation of population density in rural areas and urban suburbs and characterize more spatial variations at 250m grid level both in both urban and rural areas. The resultant population density offers better population exposure data for assessing natural disaster risk and loss as well as other related applications.}
+      \field{issn}{2072-4292}
+      \field{journaltitle}{Remote Sensing}
+      \field{number}{22}
+      \field{title}{Modeling Population Density Using a New Index Derived from Multi-Sensor Image Data}
+      \field{volume}{11}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.3390/rs11222620
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2072-4292/11/22/2620
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2072-4292/11/22/2620
+      \endverb
+    \endentry
+    \entry{metz2025application}{article}{}
+      \name{author}{17}{}{%
+        {{un=0,uniquepart=base,hash=6f07e5fd089508ac20f0174cdb1dac7d}{%
+           family={Metz},
+           familyi={M\bibinitperiod},
+           given={Lynn},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43c308e30fee07fb5dd2f2de7e88da70}{%
+           family={Haggard},
+           familyi={H\bibinitperiod},
+           given={Rachel},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=61b16c9949812c65a3021c55fe56eef8}{%
+           family={Moszczynski},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d43e7ae3d5ec7c66a2481fd8f1f894d2}{%
+           family={Asbah},
+           familyi={A\bibinitperiod},
+           given={Samer},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ccd41bf18434824c4b9f336ee7dc00a}{%
+           family={Mwase},
+           familyi={M\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8038a6e0f1b8983cbbb77bed7499c25a}{%
+           family={Khomani},
+           familyi={K\bibinitperiod},
+           given={Patricia},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00614a5fcc50af5ac0dbfd72eea6f94f}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Tyler},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b9943bd79e58bba7c9c7709b9d04498b}{%
+           family={Cooper},
+           familyi={C\bibinitperiod},
+           given={Hannah},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8b95b0c1e9459dc771aed6373788d80d}{%
+           family={Mwale},
+           familyi={M\bibinitperiod},
+           given={Annie},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f3bf31b3813d32ed9771141feabe37b}{%
+           family={Muslim},
+           familyi={M\bibinitperiod},
+           given={Arbaaz},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9500661fe78e382b86daae72a21f8a99}{%
+           family={Prasad},
+           familyi={P\bibinitperiod},
+           given={Gautam},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e6f05ae570616382665d85b3d891a365}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Mimi},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1f904a3196fc306186fe4c088454f6bf}{%
+           family={Shekel},
+           familyi={S\bibinitperiod},
+           given={Tomer},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=53eef9ea5bdeb27344dfa907326260c7}{%
+           family={Paul},
+           familyi={P\bibinitperiod},
+           given={Joydeep},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a2485e6d5e4ded15a95bcd3af1d3726b}{%
+           family={Carter},
+           familyi={C\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8b7cefe96291c1e6f4ec0a0262475d78}{%
+           family={Shetty},
+           familyi={S\bibinitperiod},
+           given={Shravya},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=29955e2dcd7986c4d3855679500a65c8}{%
+           family={Green},
+           familyi={G\bibinitperiod},
+           given={Dylan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c9f10c7a91306e031c2cf9fe89579fca}
+      \strng{fullhash}{47ce9a022f18a07fcce57cd1cb0e9545}
+      \strng{bibnamehash}{47ce9a022f18a07fcce57cd1cb0e9545}
+      \strng{authorbibnamehash}{47ce9a022f18a07fcce57cd1cb0e9545}
+      \strng{authornamehash}{c9f10c7a91306e031c2cf9fe89579fca}
+      \strng{authorfullhash}{47ce9a022f18a07fcce57cd1cb0e9545}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv}
+      \field{month}{10}
+      \field{note}{arXiv preprint}
+      \field{title}{Application and Validation of Geospatial Foundation Model Data for the Prediction of Health Facility Programmatic Outputs -- A Case Study in Malawi}
+      \field{year}{2025}
+    \endentry
+    \entry{proctor2025what}{report}{}
+      \name{author}{11}{}{%
+        {{un=0,uniquepart=base,hash=6fdad93f2cae44eeaec461ebfaaa858c}{%
+           family={Proctor},
+           familyi={P\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=018534f758197968a8b7506e5afd1259}{%
+           family={Carleton},
+           familyi={C\bibinitperiod},
+           given={Tamma},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b79ef5f29ca537fb6809b64a7b7ad32}{%
+           family={Chong},
+           familyi={C\bibinitperiod},
+           given={Trinetta},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=499d7ec7676c9c7214dc507304031d5b}{%
+           family={Fransen},
+           familyi={F\bibinitperiod},
+           given={Taryn},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=20fc3378bea0e1d30dc0794b4dbe94ee}{%
+           family={Greenhill},
+           familyi={G\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cfdefd9aa648e2e4ba3a215dc6999c55}{%
+           family={Katz},
+           familyi={K\bibinitperiod},
+           given={Jessica},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1105ef22da03797256924702b0a48bec}{%
+           family={Murayama},
+           familyi={M\bibinitperiod},
+           given={Hikari},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=40c4f1bef37d0a5bb923b527179c98b6}{%
+           family={Sherman},
+           familyi={S\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dca4eee426e1de241642a9bd44cd5b43}{%
+           family={Tseng},
+           familyi={T\bibinitperiod},
+           given={Jeanette},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=21736a84756223c48fcc596aafe6e694}{%
+           family={Druckenmiller},
+           familyi={D\bibinitperiod},
+           given={Hannah},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3ea5cf7eb9e01013d277e8a0c5855194}{%
+           family={Hsiang},
+           familyi={H\bibinitperiod},
+           given={Solomon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {National Bureau of Economic Research}%
+      }
+      \strng{namehash}{b08a605821326767742497fb992960c0}
+      \strng{fullhash}{70a487e6879b6379c4ec11b190b50436}
+      \strng{bibnamehash}{70a487e6879b6379c4ec11b190b50436}
+      \strng{authorbibnamehash}{70a487e6879b6379c4ec11b190b50436}
+      \strng{authornamehash}{b08a605821326767742497fb992960c0}
+      \strng{authorfullhash}{70a487e6879b6379c4ec11b190b50436}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{number}{34315}
+      \field{title}{What Can Satellite Imagery and Machine Learning Measure?}
+      \field{type}{Working Paper}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb http://www.nber.org/papers/w34315
+      \endverb
+      \verb{url}
+      \verb http://www.nber.org/papers/w34315
+      \endverb
+    \endentry
+    \entry{ratledge2022using}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=5663c1dd82b43f21eadc7a121df0112f}{%
+           family={Ratledge},
+           familyi={R\bibinitperiod},
+           given={Nathan},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=36f3b0c675c1114ca19889d64bac9c7d}{%
+           family={Cadamuro},
+           familyi={C\bibinitperiod},
+           given={Gabe},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=849d578f349e9bc025afa63df1535acc}{%
+           family={Cuesta},
+           familyi={C\bibinitperiod},
+           given={Brandon},
+           giveni={B\bibinitperiod},
+           givenun=0,
+           prefix={de\bibnamedelima la},
+           prefixi={d\bibinitperiod\bibinitdelim l\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=423c329daf90178c0198dcaa765fc439}{%
+           family={Stigler},
+           familyi={S\bibinitperiod},
+           given={Matthieu},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cc8245e7c2a58c63604e2816e127e747}{%
+           family={Burke},
+           familyi={B\bibinitperiod},
+           given={Marshall},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8c7946a3bce155ad39fe88e08e52c485}
+      \strng{fullhash}{ae1c22719dd58cc9b8ecbe915fc33e7f}
+      \strng{bibnamehash}{ae1c22719dd58cc9b8ecbe915fc33e7f}
+      \strng{authorbibnamehash}{ae1c22719dd58cc9b8ecbe915fc33e7f}
+      \strng{authornamehash}{8c7946a3bce155ad39fe88e08e52c485}
+      \strng{authorfullhash}{ae1c22719dd58cc9b8ecbe915fc33e7f}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{7936}
+      \field{title}{Using machine learning to assess the livelihood impact of electricity access}
+      \field{volume}{611}
+      \field{year}{2022}
+      \field{pages}{491\bibrangedash 495}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1038/s41586-022-05322-8
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41586-022-05322-8
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41586-022-05322-8
+      \endverb
+    \endentry
+    \entry{sakamoto2025scoping}{misc}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=21047ac384fe94d373da89877622584b}{%
+           family={Sakamoto},
+           familyi={S\bibinitperiod},
+           given={Kazuki},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0769b1df4701fba92dd4599b8c378a1d}{%
+           family={Jerzak},
+           familyi={J\bibinitperiod},
+           given={Connor\bibnamedelima T.},
+           giveni={C\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d27fb42566090eb176be16ef48f6cab}{%
+           family={Daoud},
+           familyi={D\bibinitperiod},
+           given={Adel},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{588c14292decefbea8fb66f7acce0452}
+      \strng{fullhash}{53e13652005cf548d019c80b85df44f4}
+      \strng{bibnamehash}{53e13652005cf548d019c80b85df44f4}
+      \strng{authorbibnamehash}{53e13652005cf548d019c80b85df44f4}
+      \strng{authornamehash}{588c14292decefbea8fb66f7acce0452}
+      \strng{authorfullhash}{53e13652005cf548d019c80b85df44f4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ML}
+      \field{eprinttype}{arXiv}
+      \field{title}{A Scoping Review of Earth Observation and Machine Learning for Causal Inference: Implications for the Geography of Poverty}
+      \field{year}{2025}
+      \verb{eprint}
+      \verb 2406.02584
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2406.02584
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2406.02584
+      \endverb
+    \endentry
+    \entry{sherman2026global}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=40c4f1bef37d0a5bb923b527179c98b6}{%
+           family={Sherman},
+           familyi={S\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6fdad93f2cae44eeaec461ebfaaa858c}{%
+           family={Proctor},
+           familyi={P\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=21736a84756223c48fcc596aafe6e694}{%
+           family={Druckenmiller},
+           familyi={D\bibinitperiod},
+           given={Hannah},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a5c30ffacb35bc2f998d147723630c4e}{%
+           family={Tapia},
+           familyi={T\bibinitperiod},
+           given={Heriberto},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3ea5cf7eb9e01013d277e8a0c5855194}{%
+           family={Hsiang},
+           familyi={H\bibinitperiod},
+           given={Solomon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8f497dda8a6d23d3de967d30374089e2}
+      \strng{fullhash}{555c088541ec1d801d16b3ac13b9809e}
+      \strng{bibnamehash}{555c088541ec1d801d16b3ac13b9809e}
+      \strng{authorbibnamehash}{555c088541ec1d801d16b3ac13b9809e}
+      \strng{authornamehash}{8f497dda8a6d23d3de967d30374089e2}
+      \strng{authorfullhash}{555c088541ec1d801d16b3ac13b9809e}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Communications}
+      \field{number}{1315}
+      \field{title}{Global high-resolution estimates of the {UN} {Human} {Development} {Index} using satellite imagery and machine learning}
+      \field{volume}{17}
+      \field{year}{2026}
+      \verb{doi}
+      \verb 10.1038/s41467-026-68805-6
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41467-026-68805-6
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41467-026-68805-6
+      \endverb
+    \endentry
+    \entry{SONG2019103580}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=63e916e51fe5ff99ea02f1bca9664bb7}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Jinchao},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=26db89470bbfe2dc6434d8f79d9c7031}{%
+           family={Tong},
+           familyi={T\bibinitperiod},
+           given={Xiaoye},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=facf1d664610e22890a03b915592dc57}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Lizhe},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=919f5bff3d11e471dde72ae2f1d601d8}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Chunli},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a04ce2deca3ee11197340f9fdcf3a6af}{%
+           family={Prishchepov},
+           familyi={P\bibinitperiod},
+           given={Alexander\bibnamedelima V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5325c9a9ed3af9148f41f8e42542477b}
+      \strng{fullhash}{45e530cb9037e7d15012ac9d7ef43c20}
+      \strng{bibnamehash}{45e530cb9037e7d15012ac9d7ef43c20}
+      \strng{authorbibnamehash}{45e530cb9037e7d15012ac9d7ef43c20}
+      \strng{authornamehash}{5325c9a9ed3af9148f41f8e42542477b}
+      \strng{authorfullhash}{45e530cb9037e7d15012ac9d7ef43c20}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Spatial distribution information on population density is essential for understanding urban dynamics. In recent decades, remote sensing techniques have often been applied to assess population density, particularly night-time light data (NTL). However, such attempts have resulted in mapped population density at coarse/medium resolution, which often limits the applicability of such data for fine-scale territorial planning. The improved quality and availability of multi-source remote sensing imagery and location-based service data (LBS) (from mobile networks or social media) offers new potential for providing more accurate population information at the micro-scale level. In this paper, we developed a fine-scale population distribution mapping approach by combining the functional zones (FZ) mapped with high-resolution satellite images, NTL data, and LBS data. Considering the possible variations in the relationship between population distribution and nightlight brightness in functional zones, we tested and found spatial heterogeneity of the relationship between NTL and the population density of LBS samples. Geographically weighted regression (GWR) was thus implemented to test potential improvements to the mapping accuracy. The performance of the following four models was evaluated: only ordinary least squares regression (OLS), only GWR, OLS with functional zones (OLS&FZ) and GWR with functional zones (GWR&FZ). The results showed that NTL-based GWR&FZ was the most accurate and robust approach, with an accuracy of 0.71, while the mapped population density was at a unit of 30 m spatial resolution. The detailed population density maps developed in our approach can contribute to fine-scale urban planning, healthcare and emergency responses in many parts of the world.}
+      \field{issn}{0169-2046}
+      \field{journaltitle}{Landscape and Urban Planning}
+      \field{title}{Monitoring finer-scale population density in urban functional zones: A remote sensing data fusion approach}
+      \field{volume}{190}
+      \field{year}{2019}
+      \field{pages}{103580}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.landurbplan.2019.05.011
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0169204619301513
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0169204619301513
+      \endverb
+      \keyw{LBS,Geographically weighted regression,Land use,Spatial heterogeneity,Urban functional zone}
+    \endentry
+    \entry{tenzer_geospatial_2023}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a9e1781e98b499b797f0d70d50bf3f33}{%
+           family={Tenzer},
+           familyi={T\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=737f016829ae48676a1ae4771e132df8}{%
+           family={Rasheed},
+           familyi={R\bibinitperiod},
+           given={Zeeshan},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1258b008b973ec0000b50f2ce52f0112}{%
+           family={Shafique},
+           familyi={S\bibinitperiod},
+           given={Khurram},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, {NY}, {USA}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{1aeb274252bfdccd9087110e0b382199}
+      \strng{fullhash}{9b16b0b136323063a9f04c51897de1a1}
+      \strng{bibnamehash}{9b16b0b136323063a9f04c51897de1a1}
+      \strng{authorbibnamehash}{9b16b0b136323063a9f04c51897de1a1}
+      \strng{authornamehash}{1aeb274252bfdccd9087110e0b382199}
+      \strng{authorfullhash}{9b16b0b136323063a9f04c51897de1a1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Human mobility research has significantly benefited from recent advances in machine learning, as have numerous other industries. Aided by the ever-increasing availability of geospatial and mobility data, machine learning models have enabled large-scale systems for simulating city-wide macro and micro mobility behaviors, urban planning, transportation management, and disaster relief optimization. However, while many fields have invested significant effort in solving the model transferability and generalization problem, the inability of machine learning-based human mobility models to generalize to new locations has come to be implicitly accepted in most geospatial research. In this vision paper, we focus on this geospatial generalization problem, its root causes, and how it is restricting the applications of otherwise-promising research. Most importantly, we argue for several data- and modeling-driven innovations which could help remedy this problem, spanning mega-scale simulations, large foundation models, and multi-task, transfer, and meta-learning. We also spotlight a handful of promising ideas which have recently emerged from the community. We hope that these proposals take root and help develop more capable, flexible, and generalizable models in research and industry.}
+      \field{day}{22}
+      \field{isbn}{979-8-4007-0168-9}
+      \field{journaltitle}{Proceedings of the 31st {ACM} International Conference on Advances in Geographic Information Systems}
+      \field{month}{12}
+      \field{series}{{SIGSPATIAL} '23}
+      \field{shorttitle}{The Geospatial Generalization Problem}
+      \field{title}{The Geospatial Generalization Problem: When Mobility Isn't Mobile}
+      \field{urlday}{11}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1145/3589132.3625590
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/henrychen/Zotero/storage/6DKR9DJN/Tenzer et al. - 2023 - The Geospatial Generalization Problem When Mobility Isn't Mobile.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3589132.3625590
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3589132.3625590
+      \endverb
+    \endentry
+    \entry{USCensus2023Funding}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fb461c0c6976b357452502c0cb338c70}{%
+           family={{U.S. Census Bureau}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{fullhash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{bibnamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authorbibnamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authornamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authorfullhash}{fb461c0c6976b357452502c0cb338c70}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Press Release CB23-102}
+      \field{month}{6}
+      \field{note}{Accessed: April 21, 2026}
+      \field{title}{Census Bureau Data Guide More Than \$2.8 Trillion in Federal Funding in Fiscal Year 2021}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.census.gov/newsroom/press-releases/2023/census-data-federal-funding.html
+      \endverb
+      \verb{url}
+      \verb https://www.census.gov/newsroom/press-releases/2023/census-data-federal-funding.html
+      \endverb
+    \endentry
+    \entry{gao2023census}{report}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bc474274331d333e981fcc2ae8e7fe17}{%
+           family={{U.S. Government Accountability Office}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {GAO}%
+      }
+      \strng{namehash}{bc474274331d333e981fcc2ae8e7fe17}
+      \strng{fullhash}{bc474274331d333e981fcc2ae8e7fe17}
+      \strng{bibnamehash}{bc474274331d333e981fcc2ae8e7fe17}
+      \strng{authorbibnamehash}{bc474274331d333e981fcc2ae8e7fe17}
+      \strng{authornamehash}{bc474274331d333e981fcc2ae8e7fe17}
+      \strng{authorfullhash}{bc474274331d333e981fcc2ae8e7fe17}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{number}{GAO-23-105819}
+      \field{title}{2020 CENSUS: A More Complete Lessons Learned Process for Cost and Schedule Would Help the Next Decennial}
+      \field{type}{Report to Congressional Requesters}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.gao.gov/products/gao-23-105819
+      \endverb
+      \verb{url}
+      \verb https://www.gao.gov/products/gao-23-105819
+      \endverb
+    \endentry
+    \entry{YAGOUB2024101122}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=8b3d173bdbd77ed63a66addffc0dade9}{%
+           family={Yagoub},
+           familyi={Y\bibinitperiod},
+           given={M.M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9cbf584c94af861402283dcd82aab8af}{%
+           family={Tesfaldet},
+           familyi={T\bibinitperiod},
+           given={Yacob\bibnamedelima T.},
+           giveni={Y\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7bc15d5bbe2cab32797a8907e1e6a701}{%
+           family={AlSumaiti},
+           familyi={A\bibinitperiod},
+           given={Tareefa},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a08b9192824ff11c6621a0e78d5de2f9}{%
+           family={{Al Hosani}},
+           familyi={A\bibinitperiod},
+           given={Naeema},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af3277c376d4604bde68b58f04d13e1d}{%
+           family={Elmubarak},
+           familyi={E\bibinitperiod},
+           given={Marwan\bibnamedelima G.},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6ed26397aa0bee6158de6de562edc6e7}
+      \strng{fullhash}{63cf697a8955ad0b116676e03e73f8f2}
+      \strng{bibnamehash}{63cf697a8955ad0b116676e03e73f8f2}
+      \strng{authorbibnamehash}{63cf697a8955ad0b116676e03e73f8f2}
+      \strng{authornamehash}{6ed26397aa0bee6158de6de562edc6e7}
+      \strng{authorfullhash}{63cf697a8955ad0b116676e03e73f8f2}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Efficient and real-time estimates of population density are crucial for monitoring urban systems and disaster response. To develop this capability, this study estimates population density using covariates derived from remote-sensing images [e.g., building density, vegetation temperature light population index (VTLPI), and day--night band (DNB)]. Data were obtained from open-access satellite images, specifically Sentinel 2A, Landsat 8, and NPP-VIIRS images. Building density, VTLPI, and DNB were extracted at the district level and compared with population density. Furthermore, vector data from geographic information systems, such as human points of interest and road networks, were used to develop a geographically weighted regression model for estimating population density. Building density and DNB correlated positively with population density (r = 0.89), and population density correlated positively with the VTLPI (r = 0.75). Although all covariates correlated positively with estimates of population density, building density and the DNB showed the best correlation. Furthermore, both parameters were considerably related to human points of interest and road network density. Finally, using geographically weighted regression (GWR) and multiple linear regression (MLR) with the building density, DNB, and human points of interest as input, we predicted the population density. The GWR model built from independent variables correlates well with the population density (AICc = 526; R2 adj. = 0.89). Overall, the GWR and MLR produce similar results. To assess the transferability of the GWR model used for Al Ain, it was tested on Abu Dhabi, and the results produce an accuracy of 36\%. This low accuracy may be attributed to the acquisition dates of the census data being different from those of the human points of interest. Further research is required to address such limitations in the proposed method and to provide additional support for using open-access remote-sensing images to estimate population density.}
+      \field{issn}{2352-9385}
+      \field{journaltitle}{Remote Sensing Applications: Society and Environment}
+      \field{title}{Estimating population density using open-access satellite images and geographic information system: Case of Al Ain city, UAE}
+      \field{volume}{33}
+      \field{year}{2024}
+      \field{pages}{101122}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.rsase.2023.101122
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2352938523002045
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2352938523002045
+      \endverb
+      \keyw{Population density,Remote sensing,Building density,Day--night band,Human point of interest,VTLPI,UAE,Al Ain,Abu Dhabi}
+    \endentry
+    \entry{zheng2026satellite}{misc}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=98f776f4f21e1f5b31b0592480a93e7d}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Zhuo},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=11a6e5942cf2e5b226408eba926f5851}{%
+           family={Higuera-Mendieta},
+           familyi={H\bibinithyphendelim M\bibinitperiod},
+           given={Iván},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d655d3606c14e964613c732724516db2}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=92737b1c3cfd016e6f41f47fa0f9ba0e}{%
+           family={Newhouse},
+           familyi={N\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0fdd29809ccfa18c8d19f8f774ebc653}{%
+           family={Kilic},
+           familyi={K\bibinitperiod},
+           given={Talip},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=160929a7e6ceecdf3f7c9a13abd5ea35}{%
+           family={Ermon},
+           familyi={E\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cc8245e7c2a58c63604e2816e127e747}{%
+           family={Burke},
+           familyi={B\bibinitperiod},
+           given={Marshall},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b95e5b4d12fe0ed0847d7cb8abaf7da0}{%
+           family={Lobell},
+           familyi={L\bibinitperiod},
+           given={David\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a9e5bb4836a5e1de553a96b0d4712683}
+      \strng{fullhash}{bf6a72b6bfbd761377cf24634a646b4e}
+      \strng{bibnamehash}{bf6a72b6bfbd761377cf24634a646b4e}
+      \strng{authorbibnamehash}{bf6a72b6bfbd761377cf24634a646b4e}
+      \strng{authornamehash}{a9e5bb4836a5e1de553a96b0d4712683}
+      \strng{authorfullhash}{bf6a72b6bfbd761377cf24634a646b4e}
+      \field{extraname}{1}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{A satellite foundation model for improved wealth monitoring}
+      \field{year}{2026}
+      \verb{eprint}
+      \verb 2604.23166
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2604.23166
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2604.23166
+      \endverb
+    \endentry
+    \entry{zheng2025dynamic}{report}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=98f776f4f21e1f5b31b0592480a93e7d}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Zhuo},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e95c6919114ff58040358042b8264107}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d655d3606c14e964613c732724516db2}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=92737b1c3cfd016e6f41f47fa0f9ba0e}{%
+           family={Newhouse},
+           familyi={N\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0fdd29809ccfa18c8d19f8f774ebc653}{%
+           family={Kilic},
+           familyi={K\bibinitperiod},
+           given={Talip},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cc8245e7c2a58c63604e2816e127e747}{%
+           family={Burke},
+           familyi={B\bibinitperiod},
+           given={Marshall},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=160929a7e6ceecdf3f7c9a13abd5ea35}{%
+           family={Ermon},
+           familyi={E\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b95e5b4d12fe0ed0847d7cb8abaf7da0}{%
+           family={Lobell},
+           familyi={L\bibinitperiod},
+           given={David\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {World Bank Group, Development Economics}%
+      }
+      \strng{namehash}{a9e5bb4836a5e1de553a96b0d4712683}
+      \strng{fullhash}{518c59b8dc27453e46db69d28f0fb2aa}
+      \strng{bibnamehash}{518c59b8dc27453e46db69d28f0fb2aa}
+      \strng{authorbibnamehash}{518c59b8dc27453e46db69d28f0fb2aa}
+      \strng{authornamehash}{a9e5bb4836a5e1de553a96b0d4712683}
+      \strng{authorfullhash}{518c59b8dc27453e46db69d28f0fb2aa}
+      \field{extraname}{2}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{number}{11058}
+      \field{title}{Dynamic, High-Resolution Wealth Measurement in Data-Scarce Environments}
+      \field{type}{Policy Research Working Paper}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb http://www.worldbank.org/prwp
+      \endverb
+      \verb{url}
+      \verb http://www.worldbank.org/prwp
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

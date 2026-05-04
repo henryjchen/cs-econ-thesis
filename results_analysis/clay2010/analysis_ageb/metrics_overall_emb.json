@@ -1,0 +1,26 @@
+{
+  "feature_set": "emb",
+  "cv": "random 5-fold (seed=0)",
+  "target": "log_popden",
+  "min_target": 1e-09,
+  "max_target": null,
+  "n_rows": 53522,
+  "n_states": 32,
+  "unit_name": "AGEBs",
+  "source_parquet": "feature_extraction_test/out/ageb_features.parquet",
+  "tag": "emb",
+  "metrics": {
+    "ridge": {
+      "r2": 0.5665225982666016,
+      "mae": 0.6328189373016357,
+      "rmse": 0.9195573925971985,
+      "n": 53522
+    },
+    "xgboost": {
+      "r2": 0.622887909412384,
+      "mae": 0.5796610116958618,
+      "rmse": 0.8576909899711609,
+      "n": 53522
+    }
+  }
+}

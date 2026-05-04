@@ -1,0 +1,42 @@
+{
+  "2010": {
+    "log_popden": {
+      "kfold5_seed0": {
+        "feature_set": "emb",
+        "ridge": {
+          "alpha": 1000.0
+        },
+        "xgboost": {
+          "colsample_bytree": 0.8345201414363137,
+          "gamma": 1.3149425896708729,
+          "learning_rate": 0.036102966179624205,
+          "max_depth": 5,
+          "min_child_weight": 7.018295352999585,
+          "reg_alpha": 5.43344956088407,
+          "reg_lambda": 0.004106324827250847,
+          "subsample": 0.7694949771881789
+        }
+      }
+    }
+  },
+  "2020": {
+    "log_popden": {
+      "kfold5_seed0": {
+        "feature_set": "emb",
+        "ridge": {
+          "alpha": 1000.0
+        },
+        "xgboost": {
+          "colsample_bytree": 0.7940508702758562,
+          "gamma": 0.0021307884974414723,
+          "learning_rate": 0.0396324483642447,
+          "max_depth": 7,
+          "min_child_weight": 25.218523421569454,
+          "reg_alpha": 0.018565947013903312,
+          "reg_lambda": 3.4955161030185424,
+          "subsample": 0.9020472426240508
+        }
+      }
+    }
+  }
+}

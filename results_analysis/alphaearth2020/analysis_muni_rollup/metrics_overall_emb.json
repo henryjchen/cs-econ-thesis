@@ -1,0 +1,26 @@
+{
+  "feature_set": "emb",
+  "cv": "random 5-fold (seed=42)",
+  "target": "log_popden",
+  "min_target": null,
+  "max_target": null,
+  "n_rows": 2469,
+  "n_states": 32,
+  "unit_name": "municipios",
+  "source_parquet": "data/embeddings/00_all_mexico_embeddings_combined.csv (municipio rollup from polygon OOF)",
+  "tag": "emb",
+  "metrics": {
+    "ridge": {
+      "r2": 0.6906325329539597,
+      "mae": 0.1331781208410682,
+      "rmse": 0.18268669834250764,
+      "n": 2469
+    },
+    "xgboost": {
+      "r2": 0.8788028580176535,
+      "mae": 0.07948449448617625,
+      "rmse": 0.1143446357834617,
+      "n": 2469
+    }
+  }
+}

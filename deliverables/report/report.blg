@@ -1,0 +1,23 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'report.blg'
+[55] biber-darwin:340> INFO - === Mon May  4, 2026, 04:52:16
+[108] Biber.pm:418> INFO - Reading 'report.bcf'
+[277] Biber.pm:972> INFO - Found 22 citekeys in bib section 0
+[289] Biber.pm:4383> INFO - Processing section 0
+[298] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[300] bibtex.pm:1713> INFO - LaTeX decoding ...
+[330] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[514] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[514] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[514] Biber.pm:4203> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[514] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[549] bbl.pm:654> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[564] bbl.pm:757> INFO - Output to report.bbl
+[564] Biber.pm:130> WARN - legacy month field 'February' in entry 'zheng2025dynamic' is not an integer - this will probably not sort properly.
+[564] Biber.pm:130> WARN - ISBN '979-8-4007-0168-9' in entry 'tenzer_geospatial_2023' is invalid - run biber with '--validate_datamodel' for details.
+[564] Biber.pm:130> WARN - legacy month field 'October' in entry 'proctor2025what' is not an integer - this will probably not sort properly.
+[564] Biber.pm:130> WARN - legacy month field 'June' in entry 'khachiyan2021using' is not an integer - this will probably not sort properly.
+[564] Biber.pm:130> WARN - legacy month field 'April' in entry 'Burns2026' is not an integer - this will probably not sort properly.
+[564] Biber.pm:130> WARN - legacy month field 'March' in entry 'gao2023census' is not an integer - this will probably not sort properly.
+[564] Biber.pm:130> WARN - legacy month field 'March' in entry 'farmer2018census' is not an integer - this will probably not sort properly.
+[564] Biber.pm:132> INFO - WARNINGS: 7

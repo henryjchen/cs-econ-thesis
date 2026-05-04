@@ -1,0 +1,59 @@
+% seniorproject.sty --- conventional LaTeX setup for a senior thesis / project report
+% Load after \documentclass; put project-specific packages (e.g. tikz) *before* this package.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{seniorproject}[2026/04/11 senior project report defaults]
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+\RequirePackage[margin=1in]{geometry}
+\RequirePackage{microtype}
+\RequirePackage{setspace}
+\RequirePackage{graphicx}
+\RequirePackage{float}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{booktabs}
+\RequirePackage{tabularx}
+\RequirePackage{array}
+\RequirePackage{xcolor}
+\RequirePackage{caption}
+\RequirePackage{etoolbox}
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{geometry} % Optional: to handle the width of the table
+\captionsetup{font=small, labelfont=bf, skip=6pt}
+% Table floats: 10\,pt body and caption (document may use 12\,pt for main text).
+\DeclareCaptionFont{tableten}{\fontsize{10}{12}\selectfont}
+\captionsetup[table]{font=tableten, labelfont={tableten,bf}}
+\AtBeginEnvironment{table}{\fontsize{10}{12}\selectfont}
+
+% Language + quotations (recommended with biblatex)
+\RequirePackage[english]{babel}
+\RequirePackage{csquotes}
+
+% Define colors to match the "RdYlGn" colormap
+\definecolor{highgreen}{HTML}{236133}
+\definecolor{midgreen}{HTML}{74AC58}
+\definecolor{lightyellow}{HTML}{E8F59E}
+\definecolor{lightorange}{HTML}{F9C776}
+\definecolor{darkred}{HTML}{A50026}
+
+% Bibliography: biber backend (run: latexmk -pdf report.tex, or pdflatex + biber + pdflatex x2)
+\RequirePackage[
+  backend=biber,
+  style=apa,
+  sorting=anyt,
+  maxbibnames=99,
+  giveninits=true,
+  uniquename=init,
+  maxalphanames=3,
+  minalphanames=1,
+]{biblatex}
+
+% hyperref after biblatex (biblatex manual)
+\RequirePackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue!60!black, urlcolor=blue!60!black, citecolor=blue!60!black}
+
+\endinput

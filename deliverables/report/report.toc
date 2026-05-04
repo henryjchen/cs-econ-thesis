@@ -1,0 +1,78 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{Acknowledgements}{ii}{section*.1}%
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Context and Motivation}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Research Question}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Key Findings}{3}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Literature Review}{4}{section.2}%
+\contentsline {paragraph}{The evolution of machine learning architectures in remote sensing.}{4}{section*.4}%
+\contentsline {paragraph}{Task-specific population models.}{4}{section*.5}%
+\contentsline {paragraph}{Geospatial foundation models.}{4}{section*.6}%
+\contentsline {paragraph}{Expanding to socioeconomic outcomes.}{5}{section*.7}%
+\contentsline {paragraph}{The challenge of temporal prediction.}{5}{section*.8}%
+\contentsline {paragraph}{Predicting historical population shifts over time.}{6}{section*.9}%
+\contentsline {paragraph}{This project's intervention.}{6}{section*.10}%
+\contentsline {section}{\numberline {3}Methodology}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Dataset}{7}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Census Data Source}{7}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Shapefile Source}{8}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Merging the Census Data with the Shapefiles}{8}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Exploratory Data Analysis}{9}{subsubsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.2}AlphaEarth and Clay foundation models}{12}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}What are Embeddings?}{12}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Key Model Differences}{12}{subsubsection.3.2.2}%
+\contentsline {paragraph}{Resolution.}{12}{section*.20}%
+\contentsline {paragraph}{Accessing embeddings.}{13}{section*.21}%
+\contentsline {subsubsection}{\numberline {3.2.3}Data Pipelines for Embedding Extraction}{14}{subsubsection.3.2.3}%
+\contentsline {paragraph}{AlphaEarth.}{14}{section*.25}%
+\contentsline {paragraph}{Clay.}{15}{section*.26}%
+\contentsline {paragraph}{Landsat continuity (Landsat-7 vs Landsat-8).}{15}{section*.27}%
+\contentsline {subsection}{\numberline {3.3}Analysis/Prediction Pipeline}{15}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Features and Target Variable}{15}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Preprocessing Normalization}{16}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Ridge Regression}{16}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}XGBoost (eXtreme Gradient Boosting)}{17}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}Hyperparameter Tuning}{17}{subsubsection.3.3.5}%
+\contentsline {paragraph}{Clay.}{17}{section*.28}%
+\contentsline {paragraph}{AlphaEarth.}{17}{section*.29}%
+\contentsline {subsubsection}{\numberline {3.3.6}Evaluation Strategy}{18}{subsubsection.3.3.6}%
+\contentsline {paragraph}{Evaluation metrics.}{18}{section*.31}%
+\contentsline {paragraph}{Target scale.}{18}{section*.33}%
+\contentsline {paragraph}{Cross-validation and out-of-fold prediction.}{19}{section*.34}%
+\contentsline {paragraph}{Spatial units evaluated.}{19}{section*.36}%
+\contentsline {subsubsection}{\numberline {3.3.7}Overview of Empirical Experiments}{20}{subsubsection.3.3.7}%
+\contentsline {subsubsection}{\numberline {3.3.8}Computational Environment}{21}{subsubsection.3.3.8}%
+\contentsline {paragraph}{Google Earth Engine.}{21}{section*.38}%
+\contentsline {paragraph}{Software stack (Python).}{21}{section*.39}%
+\contentsline {paragraph}{Hardware and scheduling.}{22}{section*.40}%
+\contentsline {section}{\numberline {4}Results}{23}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Out-of-Fold Prediction Performance}{23}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Case Studies}{24}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Calibration and Residual Diagnostics}{25}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Spatial Heterogeneity at State Scale}{27}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Drivers of State-Level Performance Differences}{27}{subsubsection.4.2.1}%
+\contentsline {paragraph}{Other Explanations.}{28}{section*.46}%
+\contentsline {subsubsection}{\numberline {4.2.2}Systematic Prediction Bias by State}{28}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.3}Predicting Change over Time}{30}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Temporal Case Studies}{31}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Calibration and Residual Diagnostics}{32}{subsubsection.4.3.2}%
+\contentsline {section}{\numberline {5}Conclusion}{34}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Discussion of Results}{34}{subsection.5.1}%
+\contentsline {paragraph}{Scale Effects on Model Performance.}{34}{section*.51}%
+\contentsline {paragraph}{Environmental Bias.}{34}{section*.52}%
+\contentsline {paragraph}{Utility vs. Precision in Temporal Change Prediction.}{35}{section*.53}%
+\contentsline {paragraph}{Synthesis.}{35}{section*.54}%
+\contentsline {subsection}{\numberline {5.2}Limitations}{35}{subsection.5.2}%
+\contentsline {paragraph}{Absence of 2010 locality-level shapefiles.}{35}{section*.55}%
+\contentsline {paragraph}{Zero-population filtering.}{36}{section*.56}%
+\contentsline {paragraph}{Potential measurement error in 2020 census labels.}{36}{section*.57}%
+\contentsline {subsection}{\numberline {5.3}Future Work}{36}{subsection.5.3}%
+\contentsline {paragraph}{Two-Stage modeling for inhabited land classification.}{36}{section*.58}%
+\contentsline {paragraph}{Predict on additional target outcomes.}{36}{section*.59}%
+\contentsline {paragraph}{Apply to real-world localized population shocks.}{36}{section*.60}%
+\contentsline {paragraph}{Technical optimizations.}{37}{section*.61}%
+\contentsline {paragraph}{Practical engagement and policy communication.}{37}{section*.62}%
+\contentsline {section}{References}{38}{section*.63}%
+\contentsline {section}{\numberline {A}Hyperparameter Tuning Details}{40}{appendix.A}%
+\contentsline {section}{\numberline {B}State-level Performance Figures}{42}{appendix.B}%
+\contentsline {section}{\numberline {C}Drivers of State-Level Performance Differences Figures}{44}{appendix.C}%

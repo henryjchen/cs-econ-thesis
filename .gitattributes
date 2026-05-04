@@ -1,0 +1,6 @@
+clay_src/CLAY_mexico_thesis/CLAY_Inference_Project/embedding_extract/data/data_prep/raw_data/inegi_csvs/iter_00_cpv2010.csv filter=lfs diff=lfs merge=lfs -text
+clay_src/CLAY_mexico_thesis/CLAY_Inference_Project/embedding_extract/data/all_mexico_merged_2020.shp filter=lfs diff=lfs merge=lfs -text
+alphaearth_src/data/embeddings/00_all_mexico_embeddings_combined.csv filter=lfs diff=lfs merge=lfs -text
+alphaearth_src/data/raw/all_mexico_loc_2020.csv filter=lfs diff=lfs merge=lfs -text
+alphaearth_src/data/geospatial/shps/complete/00a.shp filter=lfs diff=lfs merge=lfs -text
+alphaearth_src/data/geospatial/all_mexico_merged_2020.shp filter=lfs diff=lfs merge=lfs -text

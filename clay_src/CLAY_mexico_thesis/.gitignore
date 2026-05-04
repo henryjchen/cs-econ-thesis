@@ -1,0 +1,82 @@
+# --- OS Generated Files ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# --- Python & Environment ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.mypy_cache/
+.venv
+venv/
+ENV/
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints
+
+# --- Model Weights & Checkpoints ---
+*.pth
+*.pt
+*.ckpt
+*.checkpoint
+*.model
+
+# --- Logs & Output ---
+*.log
+*.out
+*.err
+log/
+logs/
+out/
+out_2020/
+CLAY_Inference_Project/log/
+CLAY_Inference_Project/logs/
+CLAY_Inference_Project/out/
+CLAY_Inference_Project/out_2020/
+
+# --- GIS & Data Files ---
+*.tif
+*.tiff
+*.cpg
+*.dbf
+*.prj
+*.shp
+*.shx
+*.sbn
+*.sbx
+*.qmd
+*.qgz
+*.zip
+
+# --- Project Specific Data Paths ---
+CLAY_Inference_Project/embedding_extract/data/data_prep/processed_data/
+CLAY_Inference_Project/embedding_extract/data/data_prep/raw_data/
+mexico-key.json
+.codex
+GEMINI.md

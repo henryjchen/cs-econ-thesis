@@ -1,0 +1,265 @@
+% references.bib --- BibTeX database for biblatex (biber)
+%
+% Add entries below. Keys are arbitrary but should be stable (e.g. agarwal2024pdfm).
+% In the text use: \parencite{key}  (parenthetical)  or  \textcite{key}  (textual)
+%                   \cite{key}      (same as \parencite with most styles)
+%
+% While drafting, you can include every entry in the .bib without citing them:
+%   \nocite{*}
+% (Remove \nocite{*} before final submission if you only want cited works listed.)
+%
+% In abstracts and titles, escape percent for LaTeX: write 50\% not 50% (otherwise the .bbl breaks).
+
+
+@article{SONG2019103580,
+  abstract   = {Spatial distribution information on population density is essential for understanding urban dynamics. In recent decades, remote sensing techniques have often been applied to assess population density, particularly night-time light data (NTL). However, such attempts have resulted in mapped population density at coarse/medium resolution, which often limits the applicability of such data for fine-scale territorial planning. The improved quality and availability of multi-source remote sensing imagery and location-based service data (LBS) (from mobile networks or social media) offers new potential for providing more accurate population information at the micro-scale level. In this paper, we developed a fine-scale population distribution mapping approach by combining the functional zones (FZ) mapped with high-resolution satellite images, NTL data, and LBS data. Considering the possible variations in the relationship between population distribution and nightlight brightness in functional zones, we tested and found spatial heterogeneity of the relationship between NTL and the population density of LBS samples. Geographically weighted regression (GWR) was thus implemented to test potential improvements to the mapping accuracy. The performance of the following four models was evaluated: only ordinary least squares regression (OLS), only GWR, OLS with functional zones (OLS&FZ) and GWR with functional zones (GWR&FZ). The results showed that NTL-based GWR&FZ was the most accurate and robust approach, with an accuracy of 0.71, while the mapped population density was at a unit of 30 m spatial resolution. The detailed population density maps developed in our approach can contribute to fine-scale urban planning, healthcare and emergency responses in many parts of the world.},
+  author     = {Jinchao Song and Xiaoye Tong and Lizhe Wang and Chunli Zhao and Alexander V. Prishchepov},
+  doi        = {https://doi.org/10.1016/j.landurbplan.2019.05.011},
+  issn       = {0169-2046},
+  journal    = {Landscape and Urban Planning},
+  keywords   = {LBS, Geographically weighted regression, Land use, Spatial heterogeneity, Urban functional zone},
+  pages      = {103580},
+  title      = {Monitoring finer-scale population density in urban functional zones: A remote sensing data fusion approach},
+  url        = {https://www.sciencedirect.com/science/article/pii/S0169204619301513},
+  volume     = {190},
+  year       = {2019},
+  bdsk-url-1 = {https://www.sciencedirect.com/science/article/pii/S0169204619301513},
+  bdsk-url-2 = {https://doi.org/10.1016/j.landurbplan.2019.05.011}
+}
+
+
+@article{rs11222620,
+  abstract       = {The detailed information about the spatial distribution of the population is crucial for analyzing economic growth, environmental change, and natural disaster damage. Using the nighttime light (NTL) imagery for population estimation has been a topic of interest in recent decades. However, the effectiveness of NTL data in population estimation has been impeded by some limitations such as the blooming effect and underestimation in rural regions. To overcome these limitations, we combine the NPP-VIIRS day/night band (DNB) data with normalized difference vegetation index (NDVI) and land surface temperature (LST) data derived from the moderate resolution imaging spectroradiometer (MODIS) onboard the Terra satellite, to create a new vegetation temperature light population index (VTLPI). A statistical model is developed to predict 250m grid-level population density based on the proposed VTLPI and the least square regression approach. After that, a case study is implemented using the data of Sichuan Province, China in 2015, and the results indicates that the VTLPI-estimated population density outperformed the results from other two methods based on nighttime light imagery or human settlement index, and the three publicized population products, LandScan, WorldPop, and GPW. When using the census data as reference, the mean relative error and median absolute relative error on a township level are 0.29 and 0.12, respectively, and the root-mean-square error is 212 persons/km2. The results show that our VTLPI-based model can achieve a better estimation of population density in rural areas and urban suburbs and characterize more spatial variations at 250m grid level both in both urban and rural areas. The resultant population density offers better population exposure data for assessing natural disaster risk and loss as well as other related applications.},
+  article-number = {2620},
+  author         = {Luo, Peng and Zhang, Xianfeng and Cheng, Junyi and Sun, Quan},
+  doi            = {10.3390/rs11222620},
+  issn           = {2072-4292},
+  journal        = {Remote Sensing},
+  number         = {22},
+  title          = {Modeling Population Density Using a New Index Derived from Multi-Sensor Image Data},
+  url            = {https://www.mdpi.com/2072-4292/11/22/2620},
+  volume         = {11},
+  year           = {2019},
+  bdsk-url-1     = {https://www.mdpi.com/2072-4292/11/22/2620},
+  bdsk-url-2     = {https://doi.org/10.3390/rs11222620}
+}
+
+
+@article{YAGOUB2024101122,
+  abstract   = {Efficient and real-time estimates of population density are crucial for monitoring urban systems and disaster response. To develop this capability, this study estimates population density using covariates derived from remote-sensing images [e.g., building density, vegetation temperature light population index (VTLPI), and day--night band (DNB)]. Data were obtained from open-access satellite images, specifically Sentinel 2A, Landsat 8, and NPP-VIIRS images. Building density, VTLPI, and DNB were extracted at the district level and compared with population density. Furthermore, vector data from geographic information systems, such as human points of interest and road networks, were used to develop a geographically weighted regression model for estimating population density. Building density and DNB correlated positively with population density (r = 0.89), and population density correlated positively with the VTLPI (r = 0.75). Although all covariates correlated positively with estimates of population density, building density and the DNB showed the best correlation. Furthermore, both parameters were considerably related to human points of interest and road network density. Finally, using geographically weighted regression (GWR) and multiple linear regression (MLR) with the building density, DNB, and human points of interest as input, we predicted the population density. The GWR model built from independent variables correlates well with the population density (AICc = 526; R2 adj. = 0.89). Overall, the GWR and MLR produce similar results. To assess the transferability of the GWR model used for Al Ain, it was tested on Abu Dhabi, and the results produce an accuracy of 36\%. This low accuracy may be attributed to the acquisition dates of the census data being different from those of the human points of interest. Further research is required to address such limitations in the proposed method and to provide additional support for using open-access remote-sensing images to estimate population density.},
+  author     = {M.M. Yagoub and Yacob T. Tesfaldet and Tareefa AlSumaiti and Naeema {Al Hosani} and Marwan G. Elmubarak},
+  doi        = {https://doi.org/10.1016/j.rsase.2023.101122},
+  issn       = {2352-9385},
+  journal    = {Remote Sensing Applications: Society and Environment},
+  keywords   = {Population density, Remote sensing, Building density, Day--night band, Human point of interest, VTLPI, UAE, Al Ain, Abu Dhabi},
+  pages      = {101122},
+  title      = {Estimating population density using open-access satellite images and geographic information system: Case of Al Ain city, UAE},
+  url        = {https://www.sciencedirect.com/science/article/pii/S2352938523002045},
+  volume     = {33},
+  year       = {2024},
+  bdsk-url-1 = {https://www.sciencedirect.com/science/article/pii/S2352938523002045},
+  bdsk-url-2 = {https://doi.org/10.1016/j.rsase.2023.101122}
+}
+
+@inproceedings{tenzer_geospatial_2023,
+  abstract   = {Human mobility research has significantly benefited from recent advances in machine learning, as have numerous other industries. Aided by the ever-increasing availability of geospatial and mobility data, machine learning models have enabled large-scale systems for simulating city-wide macro and micro mobility behaviors, urban planning, transportation management, and disaster relief optimization. However, while many fields have invested significant effort in solving the model transferability and generalization problem, the inability of machine learning-based human mobility models to generalize to new locations has come to be implicitly accepted in most geospatial research. In this vision paper, we focus on this geospatial generalization problem, its root causes, and how it is restricting the applications of otherwise-promising research. Most importantly, we argue for several data- and modeling-driven innovations which could help remedy this problem, spanning mega-scale simulations, large foundation models, and multi-task, transfer, and meta-learning. We also spotlight a handful of promising ideas which have recently emerged from the community. We hope that these proposals take root and help develop more capable, flexible, and generalizable models in research and industry.},
+  author     = {Tenzer, Mark and Rasheed, Zeeshan and Shafique, Khurram},
+  booktitle  = {Proceedings of the 31st {ACM} International Conference on Advances in Geographic Information Systems},
+  date       = {2023-12-22},
+  doi        = {10.1145/3589132.3625590},
+  file       = {Full Text PDF:/Users/henrychen/Zotero/storage/6DKR9DJN/Tenzer et al. - 2023 - The Geospatial Generalization Problem When Mobility Isn't Mobile.pdf:application/pdf},
+  isbn       = {979-8-4007-0168-9},
+  location   = {New York, {NY}, {USA}},
+  pages      = {1--4},
+  publisher  = {Association for Computing Machinery},
+  series     = {{SIGSPATIAL} '23},
+  shorttitle = {The Geospatial Generalization Problem},
+  title      = {The Geospatial Generalization Problem: When Mobility Isn't Mobile},
+  url        = {https://dl.acm.org/doi/10.1145/3589132.3625590},
+  urldate    = {2026-04-11},
+  bdsk-url-1 = {https://dl.acm.org/doi/10.1145/3589132.3625590},
+  bdsk-url-2 = {https://doi.org/10.1145/3589132.3625590}
+}
+
+
+
+@article{cai_annual_2026,
+  abstract     = {{\textless}p{\textgreater}{\textless}strong class="journal-{contentHeaderColor}"{\textgreater}Abstract.{\textless}/strong{\textgreater} Southeast Asia ({SEA}) contributes substantially to tropical agriculture, but remains underserved by high-precision cropland data due to persistent cloud cover, fragmented farming, prevalent shifting cultivation, and complex phenology. Here, we developed a 10-m annual cropland dataset for {SEA} ({SEA}\_Cropland10) covering 2019\&ndash;2024 using a random forest model on Google Earth Engine. The model integrated 88,088 Sentinel-1 {SAR} scenes, 599,255 Sentinel-2 optical images, and Google {AlphaEarth} embeddings, and was trained using 37,192 visually interpreted samples. An independent accuracy assessment was performed using 1,200 samples stratified by land-cover change trajectories to validate both temporal dynamics and spatial extent. {SEA}\_Cropland10 achieved an overall accuracy ({OA}) of 92.67 \% (\&plusmn;1.47 \%) for cropland dynamics, with annual static accuracies consistently exceeding 92.42 \% (\&plusmn;1.50 \%). The incorporation of {AlphaEarth} embeddings proved critical, improving model performance by 5.81 \%. Compared to existing global products (e.g., {GLAD}, {WorldCereal}), {SEA}\_Cropland10 improved {OA} by 14.56 \%\&ndash;19.97 \% and substantially enhanced the detection of sloping cropland (\&gt;5\&deg;) in mountainous regions of {SEA}, increasing producer\&rsquo;s accuracy in global baselines from below 29.7 \%\&ndash;32.9 \% to 89.0 \%\&ndash;99.1 \%. Consequently, we identified three- to fourfold more sloping cropland area than {GLAD} and {WorldCereal} reported. Based on {SEA}\_Cropland10, the estimated total cropland area in {SEA} shifted from 68.7 (\&plusmn;2.8) Mha in 2019 to 67.3 (\&plusmn;3.2) Mha in 2024, showing strong consistency with national statistics ({\textless}em{\textgreater}r{\textless}/em{\textgreater} = 0.90\&ndash;0.95). This dataset provides an important improvement for regional food security monitoring and carbon cycle modeling. The {SEA}-Cropland10 is publicly available at Zenodo: {\textless}a href="https://doi.org/10.5281/zenodo.17828801"{\textgreater}https://doi.org/10.5281/zenodo.17828801{\textless}/a{\textgreater} (Cai and Zeng, 2026) and Google Earth Engine App: {\textless}a href="https://ee-caiyt33tc.projects.earthengine.app/view/seacrop10"{\textgreater}https://ee-caiyt33tc.projects.earthengine.app/view/seacrop10{\textless}/a{\textgreater}.{\textless}/p{\textgreater}},
+  author       = {Cai, Yaotong and Li, Baoni and Liu, Xiaoye and Jiang, Xin and Zhu, Yakun and Luo, Shuxin and Qin, Yingzuo and Xie, Shudi and Ye, Jianhuai and Shen, Huizhong and Guo, Zhilin and Liu, Xiaoping and Zeng, Zhenzhong},
+  date         = {2026-02-25},
+  doi          = {10.5194/essd-2026-78},
+  file         = {Full Text PDF:/Users/henrychen/Zotero/storage/2ZPVNB4U/Cai et al. - 2026 - Annual 10-m high-resolution cropland maps for Southeast Asia since 2019 using AlphaEarth embeddings.pdf:application/pdf},
+  journaltitle = {Earth System Science Data Discussions},
+  pages        = {1--30},
+  publisher    = {Copernicus {GmbH}},
+  title        = {Annual 10-m high-resolution cropland maps for Southeast Asia since 2019 using {AlphaEarth} embeddings},
+  url          = {https://essd.copernicus.org/preprints/essd-2026-78/},
+  urldate      = {2026-04-11},
+  bdsk-url-1   = {https://essd.copernicus.org/preprints/essd-2026-78/},
+  bdsk-url-2   = {https://doi.org/10.5194/essd-2026-78}
+}
+
+
+@misc{USCensus2023Funding,
+  author       = {{U.S. Census Bureau}},
+  title        = {Census Bureau Data Guide More Than \$2.8 Trillion in Federal Funding in Fiscal Year 2021},
+  howpublished = {Press Release CB23-102},
+  month        = jun,
+  year         = {2023},
+  url          = {https://www.census.gov/newsroom/press-releases/2023/census-data-federal-funding.html},
+  note         = {Accessed: April 21, 2026}
+}
+
+@misc{BlackSkyGen3,
+  author       = {{BlackSky}},
+  title        = {Gen-3: Superior Intelligence Faster Than Ever Before},
+  howpublished = {\url{https://www.blacksky.com/gen-3/}},
+  year         = {2026},
+  note         = {Accessed: April 21, 2026}
+}
+
+@book{Jerven2013,
+  author    = {Jerven, Morten},
+  title     = {Poor Numbers: How We Are Misled by African Development Statistics and What to Do about It},
+  publisher = {Cornell University Press},
+  address   = {Ithaca, NY},
+  year      = {2013},
+  series    = {Cornell Studies in Political Economy},
+  isbn      = {978-0-8014-7860-4},
+  doi       = {10.7591/9780801467615}
+}
+
+@article{metz2025application,
+  title   = {Application and Validation of Geospatial Foundation Model Data for the Prediction of Health Facility Programmatic Outputs -- A Case Study in Malawi},
+  author  = {Metz, Lynn and Haggard, Rachel and Moszczynski, Michael and Asbah, Samer and Mwase, Chris and Khomani, Patricia and Smith, Tyler and Cooper, Hannah and Mwale, Annie and Muslim, Arbaaz and Prasad, Gautam and Sun, Mimi and Shekel, Tomer and Paul, Joydeep and Carter, Anna and Shetty, Shravya and Green, Dylan},
+  journal = {arXiv},
+  year    = {2025},
+  month   = {10},
+  note    = {arXiv preprint}
+}
+
+@techreport{zheng2025dynamic,
+  title       = {Dynamic, High-Resolution Wealth Measurement in Data-Scarce Environments},
+  author      = {Zheng, Zhuo and Wu, Timothy and Lee, Richard and Newhouse, David and Kilic, Talip and Burke, Marshall and Ermon, Stefano and Lobell, David B.},
+  institution = {World Bank Group, Development Economics},
+  type        = {Policy Research Working Paper},
+  number      = {11058},
+  year        = {2025},
+  month       = {February},
+  url         = {http://www.worldbank.org/prwp}
+}
+
+@article{sherman2026global,
+  title   = {Global high-resolution estimates of the {UN} {Human} {Development} {Index} using satellite imagery and machine learning},
+  author  = {Sherman, Luke and Proctor, Jonathan and Druckenmiller, Hannah and Tapia, Heriberto and Hsiang, Solomon},
+  journal = {Nature Communications},
+  year    = {2026},
+  volume  = {17},
+  number  = {1315},
+  doi     = {10.1038/s41467-026-68805-6},
+  url     = {https://doi.org/10.1038/s41467-026-68805-6}
+}
+
+@online{clayfoundation2026,
+  author = {{Clay Foundation}},
+  title  = {Clay Foundation Model: An open source {AI} model for Earth},
+  year   = {2026},
+  url    = {https://clay-foundation.github.io/model/}
+}
+
+@techreport{proctor2025what,
+  title       = {What Can Satellite Imagery and Machine Learning Measure?},
+  author      = {Proctor, Jonathan and Carleton, Tamma and Chong, Trinetta and Fransen, Taryn and Greenhill, Simon and Katz, Jessica and Murayama, Hikari and Sherman, Luke and Tseng, Jeanette and Druckenmiller, Hannah and Hsiang, Solomon},
+  institution = {National Bureau of Economic Research},
+  type        = {Working Paper},
+  number      = {34315},
+  year        = {2025},
+  month       = {October},
+  url         = {http://www.nber.org/papers/w34315}
+}
+
+@article{khachiyan2021using,
+  title   = {Using Neural Networks to Predict Micro-Spatial Economic Growth},
+  author  = {Khachiyan, Arman and Thomas, Anthony and Zhou, Huye and Hanson, Gordon and Cloninger, Alex and Rosing, Tajana and Khandelwal, Amit},
+  journal = {American Economic Review: Insights},
+  year    = {2021},
+  month   = {June},
+  note    = {Working Paper version dated June 29, 2021}
+}
+
+@article{Brownetal2025,
+  author  = {Brown, Christopher F. and Kazmierski, Michal R. and Pasquarella, Valerie J. and Rucklidge, William J. and Samsikova, Masha and Zhang, Chenhui and Shelhamer, Evan and Lahera, Estefania and Wiles, Olivia and Ilyushchenko, Simon and Gorelick, Noel and Zhang, Lihui Lydia and Alj, Sophia and Schechter, Emily and Askay, Sean and Guinan, Oliver and Moore, Rebecca and Boukouvalas, Alexis and Kohli, Pushmeet},
+  title   = {AlphaEarth Foundations: An embedding field model for accurate and efficient global mapping from sparse label data},
+  journal = {arXiv preprint arXiv:2507.22291},
+  year    = {2025},
+  doi     = {10.48550/arXiv.2507.22291}
+}
+
+@article{Burns2026,
+  author  = {Burns, Mina},
+  title   = {Rethinking Change Detection and Attribution: How You Compare Satellite Embeddings Matters},
+  journal = {Google Earth and Earth Engine (Medium)},
+  year    = {2026},
+  month   = {April},
+  day     = {13},
+  url     = {https://medium.com/google-earth/rethinking-change-detection-and-attribution-how-you-compare-satellite-embeddings-matters-858f17f577d7}
+}
+
+@misc{inegi2020censo,
+  author       = {{Instituto Nacional de Estadística y Geografía (INEGI)}},
+  title        = {Censo de Población y Vivienda 2020},
+  year         = {2021},
+  howpublished = {\url{https://www.inegi.org.mx/programas/ccpv/2020/}}
+}
+
+@techreport{gao2023census,
+  author      = {{U.S. Government Accountability Office}},
+  title       = {2020 CENSUS: A More Complete Lessons Learned Process for Cost and Schedule Would Help the Next Decennial},
+  institution = {GAO},
+  year        = {2023},
+  number      = {GAO-23-105819},
+  type        = {Report to Congressional Requesters},
+  month       = {March},
+  url         = {https://www.gao.gov/products/gao-23-105819}
+}
+
+@misc{farmer2018census,
+  author       = {Alexis Farmer},
+  title        = {Funding the Census},
+  year         = {2018},
+  month        = {March},
+  howpublished = {Brennan Center for Justice},
+  url          = {https://www.brennancenter.org/our-work/research-reports/funding-census}
+}
+
+@misc{sakamoto2025scoping,
+  author        = {Kazuki Sakamoto and Connor T. Jerzak and Adel Daoud},
+  title         = {A Scoping Review of Earth Observation and Machine Learning for Causal Inference: Implications for the Geography of Poverty},
+  year          = {2025},
+  eprint        = {2406.02584},
+  archiveprefix = {arXiv},
+  primaryclass  = {stat.ML},
+  url           = {https://arxiv.org/abs/2406.02584}
+}
+
+@misc{zheng2026satellite,
+  author        = {Zhuo Zheng and Iv{\'a}n Higuera-Mendieta and Richard Lee and David Newhouse and Talip Kilic and Stefano Ermon and Marshall Burke and David B. Lobell},
+  title         = {A satellite foundation model for improved wealth monitoring},
+  year          = {2026},
+  eprint        = {2604.23166},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2604.23166}
+}
+
+@article{ratledge2022using,
+  author  = {Nathan Ratledge and Gabe Cadamuro and Brandon de la Cuesta and Matthieu Stigler and Marshall Burke},
+  title   = {Using machine learning to assess the livelihood impact of electricity access},
+  journal = {Nature},
+  year    = {2022},
+  volume  = {611},
+  number  = {7936},
+  pages   = {491--495},
+  doi     = {10.1038/s41586-022-05322-8},
+  url     = {https://doi.org/10.1038/s41586-022-05322-8}
+}

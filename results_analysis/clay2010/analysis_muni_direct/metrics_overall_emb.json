@@ -1,0 +1,26 @@
+{
+  "feature_set": "emb",
+  "cv": "random 5-fold (seed=0)",
+  "target": "log_popden",
+  "min_target": 1e-09,
+  "max_target": null,
+  "n_rows": 2456,
+  "n_states": 32,
+  "unit_name": "municipios",
+  "source_parquet": "feature_extraction_test/out/municipio_features_direct.parquet",
+  "tag": "emb",
+  "metrics": {
+    "ridge": {
+      "r2": 0.7087118625640869,
+      "mae": 0.3247770667076111,
+      "rmse": 0.4273459017276764,
+      "n": 2456
+    },
+    "xgboost": {
+      "r2": 0.6922531127929688,
+      "mae": 0.33431732654571533,
+      "rmse": 0.43925321102142334,
+      "n": 2456
+    }
+  }
+}
